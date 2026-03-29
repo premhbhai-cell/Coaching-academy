@@ -1,0 +1,225 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import CTABanner from "@/components/CTABanner";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useCountUp } from "@/hooks/useCountUp";
+import { Target, Eye, Award, CheckCircle, Star } from "lucide-react";
+import campusImg from "@/assets/campus.jpg";
+import classroomImg from "@/assets/classroom.jpg";
+import libraryImg from "@/assets/library.jpg";
+import labImg from "@/assets/lab.jpg";
+import hostelImg from "@/assets/hostel.jpg";
+
+const milestones = [
+  { year: "2009", title: "Founded", desc: "Started with 50 students and 5 faculty members in a small classroom in Kota." },
+  { year: "2012", title: "First IIT Selection", desc: "3 students selected in IIT. Marked the beginning of our success story." },
+  { year: "2015", title: "500+ Students", desc: "Expanded to 3 classrooms. Launched NEET preparation wing." },
+  { year: "2018", title: "New Campus", desc: "Moved to a 20,000 sq ft campus with modern labs, library, and hostel facility." },
+  { year: "2021", title: "Online Expansion", desc: "Launched online classes reaching students across 15+ states in India." },
+  { year: "2024", title: "300+ Selections", desc: "Record-breaking year with 300+ IIT/NIT/AIIMS selections." },
+];
+
+const infrastructure = [
+  { img: campusImg, title: "20,000 sq ft Campus", desc: "State-of-the-art campus with AC classrooms, smart boards, and modern amenities designed for focused learning." },
+  { img: classroomImg, title: "Smart Classrooms", desc: "40+ AC classrooms with digital whiteboards, projectors, and comfortable seating for up to 60 students each." },
+  { img: libraryImg, title: "Well-Stocked Library", desc: "10,000+ books, journals, and digital resources available 12 hours a day with silent study zones." },
+  { img: labImg, title: "Science Laboratories", desc: "Fully equipped Physics, Chemistry, and Biology labs for practical learning and experimentation." },
+  { img: hostelImg, title: "Hostel Facility", desc: "Separate boys and girls hostels with nutritious meals, 24/7 security, Wi-Fi, and supervised study hours." },
+];
+
+const trustPoints = [
+  "15+ years of consistent results in JEE & NEET",
+  "Faculty from IITs, AIIMS, and premier institutions",
+  "Structured daily schedule with tests and doubt sessions",
+  "Personal mentorship — 1 mentor for every 30 students",
+  "Regular parent-teacher meetings and progress reports",
+  "Affordable fees with EMI & scholarship options",
+];
+
+export default function About() {
+  const { ref, isVisible } = useScrollReveal();
+  const { ref: ref2, isVisible: isVisible2 } = useScrollReveal();
+  const { count: studentsCount, ref: sRef } = useCountUp(5000);
+  const { count: selectionsCount, ref: selRef } = useCountUp(300);
+  const { count: facultyCount, ref: fRef } = useCountUp(50);
+
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+
+      {/* Hero */}
+      <section className="trust-bar-gradient py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-foreground mb-4">About Elite Academy</h1>
+          <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
+            15+ years of shaping futures. From a small classroom to India's most trusted coaching institute for JEE & NEET preparation.
+          </p>
+        </div>
+      </section>
+
+      {/* Our Story */}
+      <section className="section-padding bg-surface-elevated">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
+            <div>
+              <h2 className="section-title">Our Story</h2>
+              <div className="text-muted-foreground leading-relaxed space-y-4 text-base">
+                <p>Elite Academy was founded in 2009 by a group of IIT and AIIMS alumni with a singular vision — to make quality coaching accessible and result-oriented. What started as a humble initiative with just 50 students in a small classroom in Kota has now grown into one of India's most trusted coaching institutes for JEE and NEET preparation.</p>
+                <p>Over the past 15 years, we have maintained an unwavering commitment to academic excellence. Our structured teaching methodology, combined with personal mentorship and rigorous testing systems, has consistently produced top rankers year after year. We believe that every student has the potential to achieve greatness — they just need the right guidance and environment.</p>
+                <p>Today, Elite Academy operates from a 20,000 sq ft modern campus with state-of-the-art classrooms, well-equipped science laboratories, a library with 10,000+ books, and comfortable hostel facilities. Our team of 50+ expert faculty members, each with decades of experience, continues to inspire and guide thousands of students toward their dreams of IIT, AIIMS, and top medical colleges.</p>
+              </div>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <img src={campusImg} alt="Elite Academy Campus" className="w-full h-auto object-cover" loading="lazy" width={800} height={512} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="section-padding bg-surface">
+        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 max-w-4xl">
+          <div className="bg-card rounded-xl border border-border p-8 card-hover">
+            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+              <Eye className="w-7 h-7 text-primary" />
+            </div>
+            <h3 className="font-heading font-bold text-xl text-foreground mb-3">Our Vision</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              To be India's most impactful educational institution that transforms ordinary students into extraordinary achievers through innovative teaching, personal mentorship, and an unwavering commitment to academic excellence. We envision a future where every deserving student gets access to world-class coaching regardless of their background.
+            </p>
+          </div>
+          <div className="bg-card rounded-xl border border-border p-8 card-hover">
+            <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+              <Target className="w-7 h-7 text-accent" />
+            </div>
+            <h3 className="font-heading font-bold text-xl text-foreground mb-3">Our Mission</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              To provide affordable, world-class coaching for JEE and NEET with a focus on conceptual clarity, exam strategies, and holistic student development. We aim to nurture not just toppers, but confident, capable individuals ready for lifelong success. Our mission extends to building a supportive community for students and parents alike.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Students Trust Us */}
+      <section className="section-padding bg-surface-elevated" ref={ref2}>
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div className="rounded-xl overflow-hidden shadow-xl">
+              <img src={classroomImg} alt="Students studying at Elite Academy" className="w-full h-auto object-cover" loading="lazy" width={800} height={512} />
+            </div>
+            <div>
+              <h2 className="section-title">Why Students Trust Us</h2>
+              <p className="text-muted-foreground mb-6">Over 5000+ students and their parents have chosen Elite Academy because of our transparent approach, proven results, and genuine care for every student's success.</p>
+              <ul className="space-y-3">
+                {trustPoints.map((point) => (
+                  <li key={point} className={`flex items-start gap-3 ${isVisible2 ? "animate-fade-up" : "opacity-0"}`}>
+                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <span className="text-foreground text-sm">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Journey Timeline */}
+      <section className="section-padding bg-surface" ref={ref}>
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <h2 className="section-title">Our Journey</h2>
+          <p className="section-subtitle">Key milestones that shaped Elite Academy into what it is today.</p>
+          <div className="relative">
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border md:-translate-x-1/2" />
+            <div className="space-y-8">
+              {milestones.map((m, i) => (
+                <div key={m.year} className={`relative pl-12 md:pl-0 md:flex items-center gap-8 ${i % 2 === 0 ? "" : "md:flex-row-reverse"} ${isVisible ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: `${i * 100}ms` }}>
+                  {/* Mobile dot */}
+                  <div className="absolute left-2.5 top-5 w-3 h-3 rounded-full bg-primary md:hidden" />
+                  <div className={`md:w-1/2 ${i % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
+                    <div className="bg-card rounded-xl border border-border p-5 card-hover text-left">
+                      <span className="text-primary font-heading font-bold text-lg">{m.year}</span>
+                      <h4 className="font-heading font-bold text-foreground">{m.title}</h4>
+                      <p className="text-muted-foreground text-sm">{m.desc}</p>
+                    </div>
+                  </div>
+                  <div className="hidden md:flex w-4 h-4 rounded-full bg-primary shrink-0 z-10" />
+                  <div className="md:w-1/2" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="trust-bar-gradient py-12">
+        <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div ref={sRef}>
+            <div className="font-heading font-extrabold text-4xl text-primary-foreground">{studentsCount}+</div>
+            <div className="text-primary-foreground/80 text-sm">Students Taught</div>
+          </div>
+          <div ref={selRef}>
+            <div className="font-heading font-extrabold text-4xl text-primary-foreground">{selectionsCount}+</div>
+            <div className="text-primary-foreground/80 text-sm">Top Selections</div>
+          </div>
+          <div ref={fRef}>
+            <div className="font-heading font-extrabold text-4xl text-primary-foreground">{facultyCount}+</div>
+            <div className="text-primary-foreground/80 text-sm">Expert Faculty</div>
+          </div>
+          <div>
+            <div className="font-heading font-extrabold text-4xl text-primary-foreground">85%</div>
+            <div className="text-primary-foreground/80 text-sm">Selection Rate</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Infrastructure with Images */}
+      <section className="section-padding bg-surface-elevated">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="section-title">Our Infrastructure & Facilities</h2>
+          <p className="section-subtitle max-w-2xl mx-auto">World-class facilities designed to provide the best learning environment for serious aspirants.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {infrastructure.map((item) => (
+              <div key={item.title} className="bg-card rounded-xl border border-border overflow-hidden card-hover">
+                <div className="h-48 overflow-hidden">
+                  <img src={item.img} alt={item.title} className="w-full h-full object-cover img-hover" loading="lazy" />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-heading font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements */}
+      <section className="section-padding bg-surface">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <h2 className="section-title">Achievements & Milestones</h2>
+          <p className="section-subtitle">Recognition that reflects our commitment to excellence.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { icon: "🏆", title: "Best Coaching Institute", desc: "Awarded Best Coaching Institute in Rajasthan — 2022, 2023" },
+              { icon: "🎖️", title: "AIR Top 100", desc: "45+ students in All India Top 100 in JEE & NEET combined" },
+              { icon: "📊", title: "85% Selection Rate", desc: "Highest selection rate among coaching institutes in the region" },
+              { icon: "👨‍🏫", title: "50+ Expert Faculty", desc: "All faculty from IITs, AIIMS, and top universities" },
+              { icon: "📚", title: "Own Study Material", desc: "Proprietary study material used by 10,000+ students" },
+              { icon: "🌐", title: "Pan-India Reach", desc: "Students from 15+ states trust Elite Academy" },
+            ].map((a) => (
+              <div key={a.title} className="bg-card rounded-xl border border-border p-6 card-hover text-left">
+                <div className="text-3xl mb-3">{a.icon}</div>
+                <h3 className="font-heading font-bold text-foreground mb-1">{a.title}</h3>
+                <p className="text-muted-foreground text-sm">{a.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CTABanner />
+      <Footer />
+    </div>
+  );
+}
