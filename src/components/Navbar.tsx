@@ -21,8 +21,8 @@ export default function Navbar() {
       {/* Top bar */}
       <div className="trust-bar-gradient text-primary-foreground py-1.5 text-sm hidden md:block">
         <div className="container mx-auto flex justify-between items-center px-4">
-          <span>📞 Helpline: +91 98765 43210 | 📧 info@eliteacademy.in</span>
-          <span>🏆 Admissions Open for 2025-26 Batch — Limited Seats!</span>
+          <span>📞 Helpline: 9650254876 | 📧 info@adhyayanacademy.in</span>
+          <span>🏆 The Only Mantra of Success — Quality Education for Classes 6–12!</span>
         </div>
       </div>
       {/* Main navbar */}
@@ -32,8 +32,8 @@ export default function Navbar() {
             <GraduationCap className="w-6 h-6 text-primary-foreground" />
           </div>
           <div>
-            <span className="font-heading font-bold text-xl text-foreground leading-tight block">Elite Academy</span>
-            <span className="text-xs text-muted-foreground leading-none">JEE • NEET • Boards</span>
+              <span className="font-heading font-bold text-xl text-foreground leading-tight block">Adhyayan Academy</span>
+            <span className="text-xs text-muted-foreground leading-none">Classes 6–12</span>
           </div>
         </Link>
 
@@ -55,7 +55,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+919876543210" className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary">
+          <a href="tel:+919650254876" className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary">
             <Phone className="w-4 h-4" /> Call Now
           </a>
           <Link to="/admission">

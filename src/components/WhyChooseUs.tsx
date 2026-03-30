@@ -2,14 +2,14 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { CheckCircle, Target, BookOpen, Users, Award, Lightbulb, HeadphonesIcon } from "lucide-react";
 
 const points = [
-  { icon: Target, title: "Result-Oriented Teaching", desc: "Our teaching methodology is laser-focused on exam patterns and high-weightage topics for maximum marks." },
-  { icon: BookOpen, title: "Comprehensive Study Material", desc: "15,000+ practice questions, chapter-wise notes, and formula sheets — all prepared by our expert faculty." },
-  { icon: Users, title: "Small Batch Sizes", desc: "Maximum 40 students per batch ensures individual attention and better teacher-student interaction." },
-  { icon: Award, title: "Experienced Faculty", desc: "Learn from IITians, AIIMS alumni, and PhD holders with 10–20+ years of teaching experience." },
-  { icon: Lightbulb, title: "Daily Doubt Sessions", desc: "Dedicated doubt-clearing slots every day. No question goes unanswered at Elite Academy." },
-  { icon: HeadphonesIcon, title: "Personal Mentorship", desc: "Each student is assigned a personal mentor who tracks their progress and provides regular feedback." },
-  { icon: CheckCircle, title: "Weekly Test Series", desc: "Regular chapter-wise and full-syllabus tests with detailed analysis and rank comparison." },
-  { icon: Target, title: "Board + Competitive Balance", desc: "Integrated approach to ensure students excel in both board exams and competitive entrance tests." },
+  { icon: Target, title: "Personalized Attention", desc: "Small class sizes ensure every student receives individual care and focus." },
+  { icon: BookOpen, title: "Quality Study Material", desc: "Comprehensive notes, practice questions, and reference materials for all subjects." },
+  { icon: Users, title: "Experienced Faculty", desc: "Dedicated educators focused on clarity and conceptual understanding." },
+  { icon: Award, title: "Regular Assessments", desc: "Frequent tests and evaluations to track progress and identify improvement areas." },
+  { icon: Lightbulb, title: "Concept-Based Learning", desc: "Focus on understanding concepts rather than rote memorization." },
+  { icon: HeadphonesIcon, title: "Doubt Sessions", desc: "Regular doubt-clearing sessions to ensure no student is left confused." },
+  { icon: CheckCircle, title: "Progress Tracking", desc: "Regular feedback and parent-teacher meetings to monitor academic progress." },
+  { icon: Target, title: "Holistic Development", desc: "Focus on academic excellence combined with overall student development." },
 ];
 
 export default function WhyChooseUs() {
@@ -18,10 +18,9 @@ export default function WhyChooseUs() {
   return (
     <section className="section-padding bg-surface" ref={ref}>
       <div className="container mx-auto px-4 text-center">
-        <h2 className="section-title">Why Choose Elite Academy?</h2>
+        <h2 className="section-title">Why Choose Adhyayan Academy?</h2>
         <p className="section-subtitle max-w-2xl mx-auto">
           Here's what sets us apart from other coaching institutes and why parents and students trust us.
-        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {points.map((p, i) => (

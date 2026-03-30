@@ -2,12 +2,12 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Trophy, Star } from "lucide-react";
 
 const toppers = [
-  { name: "Aarav Sharma", rank: "AIR 15", exam: "JEE Advanced 2024", score: "328/360", photo: "👨‍🎓" },
-  { name: "Priya Patel", rank: "AIR 42", exam: "NEET 2024", score: "710/720", photo: "👩‍🎓" },
-  { name: "Rohit Kumar", rank: "AIR 89", exam: "JEE Advanced 2024", score: "312/360", photo: "👨‍🎓" },
-  { name: "Sneha Reddy", rank: "AIR 7", exam: "NEET 2024", score: "715/720", photo: "👩‍🎓" },
-  { name: "Vikram Singh", rank: "AIR 156", exam: "JEE Main 2024", score: "99.8%ile", photo: "👨‍🎓" },
-  { name: "Ananya Gupta", rank: "AIR 23", exam: "NEET 2024", score: "705/720", photo: "👩‍🎓" },
+  { name: "Student A", rank: "Class 10 - 94%", exam: "CBSE Boards 2024", score: "470/500", photo: "👨‍🎓" },
+  { name: "Student B", rank: "Class 12 - 96%", exam: "CBSE Boards 2024", score: "480/500", photo: "👩‍🎓" },
+  { name: "Student C", rank: "Class 9 - 93%", exam: "School Exam 2024", score: "465/500", photo: "👨‍🎓" },
+  { name: "Student D", rank: "Class 10 - 95%", exam: "CBSE Boards 2024", score: "475/500", photo: "👩‍🎓" },
+  { name: "Student E", rank: "Class 11 - 91%", exam: "School Exam 2024", score: "455/500", photo: "👨‍🎓" },
+  { name: "Student F", rank: "Class 12 - 94%", exam: "School Exam 2024", score: "470/500", photo: "👩‍🎓" },
 ];
 
 export default function ResultsSection() {

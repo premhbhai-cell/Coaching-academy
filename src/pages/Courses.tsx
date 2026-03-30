@@ -15,38 +15,38 @@ import {
 import classroomImg from "@/assets/classroom.jpg";
 
 const allCourses = [
-  { id: "jee-main-advanced", title: "JEE Main + Advanced (2 Year)", category: "JEE", classLevel: "11-12", duration: "2 Years", students: "1200+", fee: "₹1,50,000/year", desc: "Complete preparation for IIT JEE with structured curriculum covering Physics, Chemistry, and Mathematics. Includes daily classes, DPP, weekly tests, and personal mentorship.", features: ["4 hrs daily classes", "Weekly chapter tests", "Monthly mock exams", "Personal mentor", "Doubt sessions", "Study material included"] },
-  { id: "jee-crash", title: "JEE Crash Course", category: "JEE", classLevel: "12", duration: "6 Months", students: "400+", fee: "₹75,000", desc: "Intensive short-term course covering all high-weightage topics. Perfect for students who want focused last-minute preparation.", features: ["6 hrs daily", "Daily tests", "Revision sheets", "Previous year papers", "Mock tests", "Formula booklet"] },
-  { id: "neet-complete", title: "NEET UG Complete (2 Year)", category: "NEET", classLevel: "11-12", duration: "2 Years", students: "1500+", fee: "₹1,40,000/year", desc: "Comprehensive NEET preparation with focus on NCERT mastery, Biology excellence, and competitive problem-solving skills.", features: ["Biology focus sessions", "NCERT line-by-line", "Weekly NEET mocks", "Doubt clearing daily", "AIIMS-level problems", "Study material"] },
-  { id: "neet-crash", title: "NEET Crash Course", category: "NEET", classLevel: "12", duration: "4 Months", students: "350+", fee: "₹60,000", desc: "Quick revision and intensive practice for NEET. Covers all chapters with focus on high-yield topics.", features: ["5 hrs daily", "Daily practice", "Topic-wise tests", "Previous years", "Quick revision notes"] },
-  { id: "foundation-9", title: "Foundation Course (Class 9)", category: "Foundation", classLevel: "9", duration: "1 Year", students: "300+", fee: "₹80,000", desc: "Build a strong foundation in Science and Mathematics. Prepares students for Olympiads and future competitive exams.", features: ["Olympiad prep", "Concept building", "Board excellence", "Science labs", "Math workshops"] },
-  { id: "foundation-10", title: "Foundation Course (Class 10)", category: "Foundation", classLevel: "10", duration: "1 Year", students: "350+", fee: "₹85,000", desc: "Advanced foundation with Board exam focus. Bridges the gap between school and competitive exam preparation.", features: ["Board mastery", "Pre-JEE/NEET prep", "Olympiad training", "Weekly tests", "Career counseling"] },
-  { id: "boards-11", title: "Board Excellence (Class 11)", category: "Boards", classLevel: "11", duration: "1 Year", students: "500+", fee: "₹60,000", desc: "Focused on CBSE/State Board syllabus with concept clarity and exam-oriented preparation.", features: ["NCERT focus", "Chapter tests", "Lab practicals", "Board pattern papers", "Revision classes"] },
-  { id: "boards-12", title: "Board Excellence (Class 12)", category: "Boards", classLevel: "12", duration: "1 Year", students: "600+", fee: "₹65,000", desc: "Complete Class 12 Board preparation with previous year paper analysis and exam strategies.", features: ["Board pattern focus", "Sample papers", "Practical prep", "Revision modules", "Exam strategies"] },
+  { id: "class-6-7", title: "Classes 6–7", category: "Foundation", classLevel: "6-7", duration: "1 Year", students: "200+", fee: "₹25,000/year", desc: "Build strong foundation in Mathematics, Science, English, and Social Science. Focus on conceptual clarity and developing problem-solving skills.", features: ["All 4 subjects", "Regular tests", "Doubt sessions", "Concept clarity", "Study material", "Assessment"] },
+  { id: "class-8-9", title: "Classes 8–9", category: "Foundation", classLevel: "8-9", duration: "1 Year", students: "250+", fee: "₹30,000/year", desc: "Strengthen fundamentals with advanced topics in Math and Science. Prepare for competitive exams while exceling in academics.", features: ["All 4 subjects", "Weekly tests", "Doubt sessions", "Concept building", "Board prep", "Assessment"] },
+  { id: "class-10", title: "Class 10", category: "Board", classLevel: "10", duration: "1 Year", students: "300+", fee: "₹35,000/year", desc: "Comprehensive Board exam preparation for Class 10. Focus on scoring 90%+ with clear concept understanding.", features: ["All 4 subjects", "Board pattern", "Sample papers", "Regular tests", "Doubt sessions", "Lab practicals"] },
+  { id: "class-11", title: "Class 11", category: "Board", classLevel: "11", duration: "1 Year", students: "280+", fee: "₹40,000/year", desc: "Advanced curriculum covering Mathematics, Science, English, and Social Science. Focus on both board and competitive exam preparation.", features: ["All 4 subjects", "Regular tests", "Concept focus", "Doubt sessions", "Study material", "Assessment"] },
+  { id: "class-12", title: "Class 12", category: "Board", classLevel: "12", duration: "1 Year", students: "320+", fee: "₹40,000/year", desc: "Complete Class 12 preparation with focus on Board exams and higher studies. Strong emphasis on concept clarity and exam strategies.", features: ["All 4 subjects", "Board pattern", "Sample papers", "Doubt sessions", "Career guidance", "Assessment"] },
+  { id: "maths-special", title: "Mathematics Mastery", category: "Subject", classLevel: "6-12", duration: "As needed", students: "400+", fee: "₹15,000/year", desc: "Specialized Mathematics coaching for students who need extra support. Covers all topics from basics to advanced level.", features: ["Core concepts", "Problem solving", "Regular practice", "One-on-one", "Doubt clearing", "Assessment"] },
+  { id: "science-special", title: "Science Excellence", category: "Subject", classLevel: "6-12", duration: "As needed", students: "350+", fee: "₹15,000/year", desc: "Comprehensive Science tutoring covering Physics, Chemistry, and Biology. Strong focus on lab work and practical understanding.", features: ["All sciences", "Practicals", "Labs", "Doubt clearing", "Regular tests", "Assessment"] },
+  { id: "english-special", title: "English Enhancement", category: "Subject", classLevel: "6-12", duration: "As needed", students: "300+", fee: "₹12,000/year", desc: "English language and literature coaching for better communication, grammar, and writing skills.", features: ["Grammar", "Literature", "Speaking", "Writing", "Reading", "Assessment"] },
 ];
 
-const categories = ["All", "JEE", "NEET", "Foundation", "Boards"];
+const categories = ["All", "Foundation", "Board", "Subject"];
 
 const categoryOverview = [
-  { name: "JEE Preparation", desc: "Complete IIT JEE Main & Advanced preparation with structured 2-year and crash course programs. Our JEE division has produced 200+ IIT selections.", color: "bg-primary/10 text-primary" },
-  { name: "NEET Preparation", desc: "Focused medical entrance preparation with NCERT-first approach, Biology mastery, and regular NEET-pattern testing. 300+ AIIMS/medical selections.", color: "bg-accent/10 text-accent" },
-  { name: "Foundation Courses", desc: "Building strong fundamentals for Class 9 & 10 students. Early preparation gives a significant edge in competitive exams.", color: "bg-highlight/20 text-highlight-foreground" },
-  { name: "Board Excellence", desc: "Dedicated Board exam preparation ensuring students score 90%+ in CBSE/State Boards alongside competitive exam prep.", color: "bg-primary/10 text-primary" },
+  { name: "Foundation (6–9)", desc: "Build strong fundamentals in Mathematics, Science, English, and Social Science for Classes 6 to 9.", color: "bg-primary/10 text-primary" },
+  { name: "Board Preparation (10–12)", desc: "Comprehensive Board exam preparation ensuring excellent results in Class 10 and 12 Board exams.", color: "bg-accent/10 text-accent" },
+  { name: "Subject Specialization", desc: "Focused coaching in Mathematics, Science, and English for students who need additional support.", color: "bg-highlight/20 text-highlight-foreground" },
+  { name: "All Subjects", desc: "Complete curriculum covering Mathematics, Science, English, and Social Science for academic excellence.", color: "bg-primary/10 text-primary" },
 ];
 
 const whoShouldJoin = [
-  { title: "Class 9–10 Students", desc: "Start early with foundation courses to build strong concepts in Science and Mathematics before entering competitive exam preparation." },
-  { title: "Class 11–12 Students", desc: "Join our flagship JEE/NEET programs for structured, comprehensive preparation with daily classes, tests, and mentorship." },
-  { title: "Droppers / Repeaters", desc: "Focused crash courses designed for students who want to improve their rank with intensive revision and problem-solving." },
-  { title: "Board Exam Aspirants", desc: "Students aiming for 90%+ in Board exams with strong conceptual understanding and exam-oriented preparation." },
+  { title: "Class 6–7 Students", desc: "Build a strong foundation in all subjects. Develop core concepts in Mathematics and Science." },
+  { title: "Class 8–9 Students", desc: "Strengthen fundamentals and prepare for competitive exams. Focus on conceptual clarity." },
+  { title: "Class 10 Students", desc: "Comprehensive Board exam preparation with focus on scoring 90%+." },
+  { title: "Class 11–12 Students", desc: "Advanced curriculum with focus on Board exams and higher studies." },
 ];
 
 const courseFaqs = [
-  { q: "What is the admission process?", a: "Fill the online application form or visit our center. You'll take an entrance test followed by a counseling session. Admission is based on test performance and available seats." },
-  { q: "Are scholarships available?", a: "Yes! We offer scholarships up to 50% based on entrance test scores. Students from economically weaker backgrounds can also apply for fee waivers." },
-  { q: "Can I switch between batches?", a: "Yes, batch switching is allowed within the first month subject to availability. Talk to your batch coordinator for the process." },
-  { q: "Is hostel facility available?", a: "Yes, we have separate boys and girls hostels with meals, Wi-Fi, laundry, and supervised study hours included." },
-  { q: "What if I miss classes?", a: "Recorded lectures are available for all sessions. You can also attend the same topic in another batch at no extra cost." },
+  { q: "What subjects are covered?", a: "We cover Mathematics, Science (Physics, Chemistry, Biology), English, and Social Science for Classes 6 to 12." },
+  { q: "What is the admission process?", a: "Fill the online form or visit our campus. We provide a counseling session to understand your needs and recommend the best course." },
+  { q: "Are there scholarships available?", a: "Yes, we offer scholarships based on merit. Contact us for details." },
+  { q: "Can I switch between batches?", a: "Yes, batch switching is allowed with prior notice, subject to availability." },
+  { q: "What if I miss classes?", a: "Study materials and reference notes are provided. Doubt sessions are held regularly to help you catch up." },
 ];
 
 export default function Courses() {
@@ -64,7 +64,7 @@ export default function Courses() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-foreground mb-4">Our Courses</h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            Explore our range of courses designed for every level — from foundation building to IIT/NEET cracking. Choose the right program for your goals.
+            Quality education for Classes 6 to 12 covering Mathematics, Science, English, and Social Science. Choose the right program for your child's success.
           </p>
         </div>
       </section>

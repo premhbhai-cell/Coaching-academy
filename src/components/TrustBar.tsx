@@ -2,10 +2,10 @@ import { useCountUp } from "@/hooks/useCountUp";
 import { Users, Trophy, Clock, BookOpen } from "lucide-react";
 
 const stats = [
-  { icon: Users, value: 5000, suffix: "+", label: "Students Enrolled" },
-  { icon: Trophy, value: 300, suffix: "+", label: "Top Selections" },
-  { icon: Clock, value: 15, suffix: "+", label: "Years Experience" },
-  { icon: BookOpen, value: 50, suffix: "+", label: "Expert Faculty" },
+  { icon: Users, value: 2500, suffix: "+", label: "Students Benefited" },
+  { icon: Trophy, value: 1500, suffix: "+", label: "High Achievers" },
+  { icon: Clock, value: 8, suffix: "+", label: "Years Experience" },
+  { icon: BookOpen, value: 15, suffix: "+", label: "Expert Faculty" },
 ];
 
 function StatItem({ icon: Icon, value, suffix, label }: typeof stats[0]) {

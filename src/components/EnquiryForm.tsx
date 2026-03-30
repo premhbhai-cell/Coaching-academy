@@ -28,9 +28,9 @@ export default function EnquiryForm() {
               the best course for your child.
             </p>
             <div className="space-y-4 text-sm text-muted-foreground">
-              <p>📞 <strong className="text-foreground">Phone:</strong> +91 98765 43210</p>
-              <p>📧 <strong className="text-foreground">Email:</strong> info@eliteacademy.in</p>
-              <p>📍 <strong className="text-foreground">Address:</strong> 123, Knowledge Park, Kota, Rajasthan</p>
+              <p>📞 <strong className="text-foreground">Phone:</strong> 9650254876</p>
+              <p>📧 <strong className="text-foreground">Email:</strong> info@adhyayanacademy.in</p>
+              <p>📍 <strong className="text-foreground">Address:</strong> High Tension Road, Near Malerna Road, Adarsh Nagar, Ballabgarh</p>
               <p>⏰ <strong className="text-foreground">Office Hours:</strong> Mon–Sat, 9 AM – 7 PM</p>
             </div>
           </div>

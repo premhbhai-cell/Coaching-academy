@@ -11,25 +11,24 @@ export default function HeroSection() {
           {/* Left */}
           <div className="animate-fade-up">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-              ⭐ Trusted by 5000+ Students Across India
+              ⭐ The Only Mantra of Success
             </div>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold leading-tight text-foreground mb-6">
-              Join the Most Trusted Coaching Institute for{" "}
-              <span className="text-primary">JEE</span> &{" "}
-              <span className="text-accent">NEET</span> Preparation
+              Classes Available for{" "}
+              <span className="text-primary">6th to 12th</span> Grade
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6 max-w-xl">
-              At Elite Academy, we follow a structured and result-oriented teaching methodology designed by IITians and 
-              top medical professionals. Our comprehensive test system evaluates students weekly, ensuring continuous improvement. 
-              With personal mentorship from day one, daily doubt-clearing sessions, and India's best curated study material, 
-              we have consistently produced top rankers in JEE and NEET over the past 15 years.
+              At Adhyayan Academy, we provide quality education in Mathematics, Science, English, and Social Science for students from Classes 6 to 12. 
+              Our structured and student-centric approach ensures conceptual clarity and academic excellence. 
+              With experienced faculty, regular tests, doubt sessions, and personalized attention, 
+              we have consistently helped students excel in their studies over the years.
             </p>
             <ul className="space-y-2.5 mb-8">
               {[
-                "Weekly Tests & Performance Tracking",
-                "Personal Mentorship by IITians & Doctors",
-                "Structured Study Material (15,000+ Questions)",
-                "Proven Selection Results Every Year",
+                "Experienced Faculty Members",
+                "Regular Tests & Assessment",
+                "Concept-Based Learning Approach",
+                "Doubt Sessions Every Week",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2.5 text-foreground font-medium">
                   <CheckCircle className="w-5 h-5 text-green-600 shrink-0" />

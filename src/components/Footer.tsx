@@ -12,12 +12,11 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
                 <GraduationCap className="w-6 h-6 text-primary-foreground" />
               </div>
-              <span className="font-heading font-bold text-xl">Elite Academy</span>
+              <span className="font-heading font-bold text-xl">Adhyayan Academy</span>
             </div>
             <p className="text-sm opacity-80 leading-relaxed mb-4">
-              India's most trusted coaching institute for JEE, NEET, and Board exam preparation. 
-              Delivering excellence in education since 2009 with proven results and expert faculty.
-            </p>
+              Adhyayan Academy is a trusted coaching institute providing quality education for Classes 6 to 12. 
+              With experienced faculty, concept-based learning, and regular assessments, we help students achieve academic excellence.
             <div className="flex gap-3">
               {[Facebook, Instagram, Youtube, Twitter].map((Icon, i) => (
                 <a key={i} href="#" className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors">
@@ -64,22 +63,22 @@ export default function Footer() {
             <div className="space-y-3 text-sm opacity-80">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>123, Knowledge Park, Kota, Rajasthan - 324005</span>
+                <span>High Tension Road, Near Malerna Road, Adarsh Nagar, Ballabgarh</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 shrink-0" />
-                <span>+91 98765 43210</span>
+                <span>9650254876</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 shrink-0" />
-                <span>info@eliteacademy.in</span>
+                <span>info@adhyayanacademy.in</span>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="border-t border-primary-foreground/10 py-4 text-center text-sm opacity-60">
-        © 2025 Elite Academy. All Rights Reserved. | Designed for Academic Excellence
+        © 2025 Adhyayan Academy. All Rights Reserved. | The Only Mantra of Success
       </div>
     </footer>
   );

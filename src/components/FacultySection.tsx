@@ -2,10 +2,8 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Award, BookOpen } from "lucide-react";
 
 const faculty = [
-  { name: "Dr. Rajesh Kumar", subject: "Physics", exp: "18 years", tag: "IIT Delhi Alumni", desc: "Specializes in Mechanics & Electromagnetism. Known for making complex concepts easy." },
-  { name: "Prof. Sunita Verma", subject: "Chemistry", exp: "15 years", tag: "PhD Chemistry", desc: "Expert in Organic Chemistry. Published 12 research papers in international journals." },
-  { name: "Mr. Amit Sharma", subject: "Mathematics", exp: "20 years", tag: "IIT Bombay Alumni", desc: "Master of Calculus & Algebra. Produced 50+ IIT selections in last 5 years." },
-  { name: "Dr. Priya Nair", subject: "Biology", exp: "14 years", tag: "AIIMS Faculty", desc: "Specialist in Human Physiology. Former AIIMS professor with deep NEET expertise." },
+  { name: "Anil Sharma", subject: "Mathematics & Science", exp: "15 years", tag: "Subject Expert", desc: "Specializes in making concepts easy to understand. Known for personalized teaching approach." },
+  { name: "Avni Sharma", subject: "English & Social Science", exp: "12 years", tag: "Expert Faculty", desc: "Focuses on comprehensive learning and analytical thinking. Dedicated to student development." },
 ];
 
 export default function FacultySection() {
@@ -17,13 +15,12 @@ export default function FacultySection() {
         <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-4">
           <Award className="w-4 h-4" /> Expert Faculty Team
         </div>
-        <h2 className="section-title">Learn From the Best Educators</h2>
+        <h2 className="section-title">Learn From Experienced Faculty</h2>
         <p className="section-subtitle max-w-2xl mx-auto">
-          Our faculty comprises IITians, AIIMS alumni, PhD holders, and experienced educators 
-          who have collectively mentored thousands of successful students.
-        </p>
+          Our faculty comprises dedicated educators committed to providing quality education 
+          and personalized attention to every student.
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {faculty.map((f, i) => (
             <div
               key={f.name}

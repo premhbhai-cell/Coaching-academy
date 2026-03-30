@@ -16,10 +16,10 @@ import {
 
 const contactFaqs = [
   { q: "What are the office hours for visiting?", a: "Our office is open Monday to Saturday, 9:00 AM to 7:00 PM. Sunday visits are by appointment only. We recommend calling ahead to schedule a campus tour." },
-  { q: "How can I schedule a free counseling session?", a: "You can call our admission helpline at +91 98765 43210, fill the contact form on this page, or WhatsApp us. We'll schedule a 30-minute counseling session at your convenience." },
-  { q: "Do you have branches in other cities?", a: "Currently, our main campus is in Kota, Rajasthan. We also offer online classes for students across India. We're planning to open centers in Delhi and Jaipur by 2026." },
+  { q: "How can I schedule a free counseling session?", a: "You can call us at 9650254876, fill the contact form on this page, or WhatsApp us. We'll schedule a counseling session at your convenience." },
+  { q: "What classes do you offer?", a: "We offer classes from 6th to 12th grade, covering Mathematics, Science, English, and Social Science with experienced faculty." },
   { q: "Can parents visit the campus?", a: "Absolutely! We encourage parents to visit our campus, meet the faculty, and see our infrastructure. Campus tours are available during office hours." },
-  { q: "How do I report an issue or give feedback?", a: "You can email us at feedback@eliteacademy.in or call our helpline. We take every feedback seriously and respond within 24 hours." },
+  { q: "How do I report an issue or give feedback?", a: "You can email us at info@adhyayanacademy.in or call our helpline. We take every feedback seriously and respond within 24 hours." },
 ];
 
 export default function Contact() {
@@ -53,9 +53,9 @@ export default function Contact() {
               <p className="text-muted-foreground mb-6">Have a question about our courses, admission process, or want to schedule a campus visit? We'd love to hear from you. Our team responds within 24 hours.</p>
               <div className="space-y-5">
                 {[
-                  { icon: Phone, label: "Phone", value: "+91 98765 43210", sub: "+91 98765 43211 (Admissions)" },
-                  { icon: Mail, label: "Email", value: "info@eliteacademy.in", sub: "admissions@eliteacademy.in" },
-                  { icon: MapPin, label: "Address", value: "123, Knowledge Park", sub: "Kota, Rajasthan - 324005" },
+                  { icon: Phone, label: "Phone", value: "9650254876", sub: "For admissions & queries" },
+                  { icon: Mail, label: "Email", value: "info@adhyayanacademy.in", sub: "admissions@adhyayanacademy.in" },
+                  { icon: MapPin, label: "Address", value: "High Tension Road, Near Malerna Road", sub: "Adarsh Nagar, Ballabgarh" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4 bg-card rounded-xl border border-border p-4">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
@@ -89,7 +89,7 @@ export default function Contact() {
               </div>
 
               {/* WhatsApp */}
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 bg-green-600 text-primary-foreground px-6 py-3 rounded-xl font-bold btn-hover shadow-lg">
+              <a href="https://wa.me/919650254876" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 bg-green-600 text-primary-foreground px-6 py-3 rounded-xl font-bold btn-hover shadow-lg">
                 <MessageCircle className="w-5 h-5" /> Chat on WhatsApp
               </a>
             </div>

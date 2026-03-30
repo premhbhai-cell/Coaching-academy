@@ -11,12 +11,12 @@ import labImg from "@/assets/lab.jpg";
 import hostelImg from "@/assets/hostel.jpg";
 
 const milestones = [
-  { year: "2009", title: "Founded", desc: "Started with 50 students and 5 faculty members in a small classroom in Kota." },
-  { year: "2012", title: "First IIT Selection", desc: "3 students selected in IIT. Marked the beginning of our success story." },
-  { year: "2015", title: "500+ Students", desc: "Expanded to 3 classrooms. Launched NEET preparation wing." },
-  { year: "2018", title: "New Campus", desc: "Moved to a 20,000 sq ft campus with modern labs, library, and hostel facility." },
-  { year: "2021", title: "Online Expansion", desc: "Launched online classes reaching students across 15+ states in India." },
-  { year: "2024", title: "300+ Selections", desc: "Record-breaking year with 300+ IIT/NIT/AIIMS selections." },
+  { year: "2015", title: "Founded", desc: "Started with a vision to provide quality education for Classes 6 to 12 students." },
+  { year: "2018", title: "Growth", desc: "Expanded to serve 500+ students with dedicated faculty members." },
+  { year: "2020", title: "Online Expansion", desc: "Launched online classes reaching students across multiple cities." },
+  { year: "2022", title: "Dedicated Campus", desc: "Established modern classrooms, study areas, and learning resources." },
+  { year: "2023", title: "Excellence", desc: "Achieved consistent academic excellence with improved student results." },
+  { year: "2024", title: "The Only Mantra of Success", desc: "Recognized for quality education and student-centric approach." },
 ];
 
 const infrastructure = [
@@ -28,20 +28,20 @@ const infrastructure = [
 ];
 
 const trustPoints = [
-  "15+ years of consistent results in JEE & NEET",
-  "Faculty from IITs, AIIMS, and premier institutions",
+  "Quality education for Classes 6 to 12",
+  "Experienced faculty with subject expertise",
   "Structured daily schedule with tests and doubt sessions",
-  "Personal mentorship — 1 mentor for every 30 students",
+  "Personal attention — focus on individual student needs",
   "Regular parent-teacher meetings and progress reports",
-  "Affordable fees with EMI & scholarship options",
+  "Affordable fees with flexible payment options",
 ];
 
 export default function About() {
   const { ref, isVisible } = useScrollReveal();
   const { ref: ref2, isVisible: isVisible2 } = useScrollReveal();
-  const { count: studentsCount, ref: sRef } = useCountUp(5000);
-  const { count: selectionsCount, ref: selRef } = useCountUp(300);
-  const { count: facultyCount, ref: fRef } = useCountUp(50);
+  const { count: studentsCount, ref: sRef } = useCountUp(2500);
+  const { count: selectionsCount, ref: selRef } = useCountUp(1500);
+  const { count: facultyCount, ref: fRef } = useCountUp(15);
 
   return (
     <div className="min-h-screen">
@@ -50,9 +50,9 @@ export default function About() {
       {/* Hero */}
       <section className="trust-bar-gradient py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-foreground mb-4">About Elite Academy</h1>
+          <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-foreground mb-4">About Adhyayan Academy</h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            15+ years of shaping futures. From a small classroom to India's most trusted coaching institute for JEE & NEET preparation.
+            Committed to providing quality education for Classes 6 to 12. The Only Mantra of Success — Guided by experienced faculty.
           </p>
         </div>
       </section>
@@ -64,9 +64,9 @@ export default function About() {
             <div>
               <h2 className="section-title">Our Story</h2>
               <div className="text-muted-foreground leading-relaxed space-y-4 text-base">
-                <p>Elite Academy was founded in 2009 by a group of IIT and AIIMS alumni with a singular vision — to make quality coaching accessible and result-oriented. What started as a humble initiative with just 50 students in a small classroom in Kota has now grown into one of India's most trusted coaching institutes for JEE and NEET preparation.</p>
-                <p>Over the past 15 years, we have maintained an unwavering commitment to academic excellence. Our structured teaching methodology, combined with personal mentorship and rigorous testing systems, has consistently produced top rankers year after year. We believe that every student has the potential to achieve greatness — they just need the right guidance and environment.</p>
-                <p>Today, Elite Academy operates from a 20,000 sq ft modern campus with state-of-the-art classrooms, well-equipped science laboratories, a library with 10,000+ books, and comfortable hostel facilities. Our team of 50+ expert faculty members, each with decades of experience, continues to inspire and guide thousands of students toward their dreams of IIT, AIIMS, and top medical colleges.</p>
+                <p>Adhyayan Academy was founded with a mission to provide quality education for Classes 6 to 12. With a singular vision to make quality coaching accessible and result-oriented, we focus on delivering conceptual clarity, strong fundamentals, and academic excellence.</p>
+                <p>Over the years, we have maintained an unwavering commitment to student success. Our structured teaching methodology, combined with experienced faculty and regular assessment, has consistently helped students achieve academic excellence. We believe that every student has the potential to excel — they just need the right guidance and environment.</p>
+                <p>Today, Adhyayan Academy operates with a dedicated team of experienced faculty members who bring passion and expertise to their teaching. Our focus on personalized attention, regular tests, doubt sessions, and concept-based learning ensures that every student receives the support they need to succeed.</p>
               </div>
             </div>
             <div className="rounded-xl overflow-hidden shadow-xl">
@@ -85,7 +85,7 @@ export default function About() {
             </div>
             <h3 className="font-heading font-bold text-xl text-foreground mb-3">Our Vision</h3>
             <p className="text-muted-foreground leading-relaxed">
-              To be India's most impactful educational institution that transforms ordinary students into extraordinary achievers through innovative teaching, personal mentorship, and an unwavering commitment to academic excellence. We envision a future where every deserving student gets access to world-class coaching regardless of their background.
+              To be a trusted educational organization that transforms students into confident, capable learners through quality education in Classes 6 to 12. We envision empowering every student to achieve academic excellence and develop a lifelong passion for learning.
             </p>
           </div>
           <div className="bg-card rounded-xl border border-border p-8 card-hover">
@@ -94,7 +94,7 @@ export default function About() {
             </div>
             <h3 className="font-heading font-bold text-xl text-foreground mb-3">Our Mission</h3>
             <p className="text-muted-foreground leading-relaxed">
-              To provide affordable, world-class coaching for JEE and NEET with a focus on conceptual clarity, exam strategies, and holistic student development. We aim to nurture not just toppers, but confident, capable individuals ready for lifelong success. Our mission extends to building a supportive community for students and parents alike.
+              To provide affordable, quality education for Classes 6 to 12 with a focus on conceptual clarity, strong fundamentals, and holistic student development. We aim to nurture confident, capable individuals ready for success in their academic pursuits. Our mission extends to building a supportive community for students and parents alike.
             </p>
           </div>
         </div>

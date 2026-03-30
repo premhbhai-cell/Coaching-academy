@@ -7,11 +7,11 @@ export default function CTABanner() {
     <section className="trust-bar-gradient py-14">
       <div className="container mx-auto px-4 text-center">
         <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-primary-foreground mb-4">
-          Ready to Start Your Journey to IIT / AIIMS?
+          Ready to Excel in Your Studies?
         </h2>
         <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-          Join the 5000+ students who chose Elite Academy and achieved their dreams. 
-          Limited seats available for the 2025–26 batch. Don't miss out!
+          Join Adhyayan Academy for Classes 6–12 and experience quality education with experienced faculty. 
+          Limited seats available. Enroll now and start your journey to success!
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link to="/admission">
@@ -19,9 +19,9 @@ export default function CTABanner() {
               Apply Now — Free Counseling <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>
-          <a href="tel:+919876543210">
+          <a href="tel:+919650254876">
             <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary btn-hover font-bold px-8 py-6 text-base">
-              <Phone className="mr-2 w-5 h-5" /> Call: +91 98765 43210
+              <Phone className="mr-2 w-5 h-5" /> Call: 9650254876
             </Button>
           </a>
         </div>
