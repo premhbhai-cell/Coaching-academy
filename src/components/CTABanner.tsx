@@ -15,12 +15,12 @@ export default function CTABanner() {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link to="/admission">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 btn-hover font-bold px-8 py-6 text-base shadow-lg">
+            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 hover:text-accent-foreground btn-hover font-bold px-8 py-6 text-base shadow-lg">
               Apply Now — Free Counseling <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>
           <a href="tel:+919650254876">
-            <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary btn-hover font-bold px-8 py-6 text-base">
+            <Button size="lg" variant="outline" className="border-2 border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary font-bold px-8 py-6 text-base">
               <Phone className="mr-2 w-5 h-5" /> Call: 9650254876
             </Button>
           </a>

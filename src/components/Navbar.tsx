@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, GraduationCap } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoss from "@/assets/logoss.png";
 
 const navLinks = [
   { path: "/", label: "Home" },
@@ -28,11 +29,9 @@ export default function Navbar() {
       {/* Main navbar */}
       <nav className="container mx-auto flex items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-            <GraduationCap className="w-6 h-6 text-primary-foreground" />
-          </div>
+          <img src={logoss} alt="Adhyayan Academy Logo" className="w-10 h-10 object-contain" />
           <div>
-              <span className="font-heading font-bold text-xl text-foreground leading-tight block">Adhyayan Academy</span>
+            <span className="font-heading font-bold text-xl text-foreground leading-tight block">Adhyayan Academy</span>
             <span className="text-xs text-muted-foreground leading-none">Classes 6–12</span>
           </div>
         </Link>
