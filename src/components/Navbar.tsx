@@ -29,11 +29,7 @@ export default function Navbar() {
       {/* Main navbar */}
       <nav className="container mx-auto flex items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logoss} alt="Adhyayan Academy Logo" className="w-10 h-10 object-contain" />
-          <div>
-            <span className="font-heading font-bold text-xl text-foreground leading-tight block">Adhyayan Academy</span>
-            <span className="text-xs text-muted-foreground leading-none">Classes 6–12</span>
-          </div>
+          <img src={logoss} alt="Adhyayan Academy Logo" className="h-10 w-auto object-contain" />
         </Link>
 
         {/* Desktop links */}
