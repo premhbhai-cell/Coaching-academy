@@ -17,6 +17,7 @@ export default function Footer() {
             <p className="text-sm opacity-80 leading-relaxed mb-4">
               Adhyayan Academy is a trusted coaching institute providing quality education for Classes 6 to 12. 
               With experienced faculty, concept-based learning, and regular assessments, we help students achieve academic excellence.
+            </p>
             <div className="flex gap-3">
               {[Facebook, Instagram, Youtube, Twitter].map((Icon, i) => (
                 <a key={i} href="#" className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors">
