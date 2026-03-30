@@ -19,6 +19,7 @@ export default function FacultySection() {
         <p className="section-subtitle max-w-2xl mx-auto">
           Our faculty comprises dedicated educators committed to providing quality education 
           and personalized attention to every student.
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {faculty.map((f, i) => (
