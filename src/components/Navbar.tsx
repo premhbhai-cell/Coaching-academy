@@ -29,7 +29,7 @@ export default function Navbar() {
       {/* Main navbar */}
       <nav className="container mx-auto flex items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Adhyayan Academy Logo" className="h-10 w-auto object-contain" />
+          <img src={logo} alt="Adhyayan Academy Logo" className="w-32 md:w-36 lg:w-40 h-auto object-contain" />
         </Link>
 
         {/* Desktop links */}
