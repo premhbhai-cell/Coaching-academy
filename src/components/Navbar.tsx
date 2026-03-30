@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoss from "@/assets/logoss.png";
+import logo from "../assets/logoa.png";
 
 const navLinks = [
   { path: "/", label: "Home" },
@@ -29,7 +29,7 @@ export default function Navbar() {
       {/* Main navbar */}
       <nav className="container mx-auto flex items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logoss} alt="Adhyayan Academy Logo" className="h-10 w-auto object-contain" />
+          <img src={logo} alt="Adhyayan Academy Logo" className="h-10 w-auto object-contain" />
         </Link>
 
         {/* Desktop links */}
