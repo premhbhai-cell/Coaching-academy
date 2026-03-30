@@ -21,6 +21,7 @@ export default function WhyChooseUs() {
         <h2 className="section-title">Why Choose Adhyayan Academy?</h2>
         <p className="section-subtitle max-w-2xl mx-auto">
           Here's what sets us apart from other coaching institutes and why parents and students trust us.
+        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {points.map((p, i) => (
