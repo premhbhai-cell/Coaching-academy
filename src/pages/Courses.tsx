@@ -225,7 +225,7 @@ export default function Courses() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
             <div>
-              <h2 className="section-title">Who Should Join Elite Academy?</h2>
+              <h2 className="section-title">Who Should Join Vidyarthi Academy?</h2>
               <p className="text-muted-foreground mb-6">Whether you're building fundamentals or aiming for top competitive exam ranks, we have the right coaching program for you.</p>
               <div className="space-y-4">
                 {whoShouldJoin.map((item, i) => (

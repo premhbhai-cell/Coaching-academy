@@ -40,7 +40,7 @@ const studentFeedback = [
   { name: "Sneha R.", about: "Dr. Rajesh Kumar", text: "Sir's way of teaching Physics is magical. He made Electromagnetism — my weakest topic — into my strongest. His visual explanations stay in your mind forever." },
   { name: "Aarav S.", about: "Mr. Amit Sharma", text: "Amit Sir doesn't just solve problems — he teaches you how to think about problems. After his classes, I could attempt advanced subject-level questions with confidence." },
   { name: "Priya P.", about: "Dr. Priya Nair", text: "Ma'am's NCERT line-by-line approach is the reason I scored top marks. She makes even the most difficult chapters interesting with her clinical examples." },
-  { name: "Rohit K.", about: "Prof. Sunita Verma", text: "Organic Chemistry felt like a nightmare before joining Elite Academy. Sunita Ma'am's reaction mechanism walkthroughs made it my favorite subject." },
+  { name: "Rohit K.", about: "Prof. Sunita Verma", text: "Organic Chemistry felt like a nightmare before joining Vidyarthi Academy. Sunita Ma'am's reaction mechanism walkthroughs made it my favorite subject." },
 ];
 
 export default function FacultyPage() {
@@ -55,7 +55,7 @@ export default function FacultyPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-foreground mb-4">Our Faculty</h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            Meet the brilliant minds behind Elite Academy's success. IITians, AIIMS alumni, and PhD holders with a combined 100+ years of teaching experience.
+            Meet the brilliant minds behind Vidyarthi Academy's success. IITians, AIIMS alumni, and PhD holders with a combined 100+ years of teaching experience.
           </p>
         </div>
       </section>
@@ -109,7 +109,7 @@ export default function FacultyPage() {
       <section className="section-padding bg-surface-elevated">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="section-title">Our Teaching Philosophy</h2>
-          <p className="section-subtitle max-w-2xl mx-auto">What makes Elite Academy's teaching different from every other coaching institute.</p>
+          <p className="section-subtitle max-w-2xl mx-auto">What makes Vidyarthi Academy's teaching different from every other coaching institute.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {teachingPhilosophy.map((p) => (
               <div key={p.title} className="bg-card rounded-xl border border-border p-6 text-left card-hover">

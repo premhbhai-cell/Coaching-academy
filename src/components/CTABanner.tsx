@@ -10,7 +10,7 @@ export default function CTABanner() {
           Ready to Excel in Your Studies?
         </h2>
         <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-          Join Adhyayan Academy for premium subject coaching in Science and Commerce. Limited seats available. Enroll now and start your journey to success!
+          Join Vidyarthi Academy for premium subject coaching in Science and Commerce. Limited seats available. Enroll now and start your journey to success!
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link to="/admission">

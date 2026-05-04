@@ -12,10 +12,10 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
                 <GraduationCap className="w-6 h-6 text-primary-foreground" />
               </div>
-              <span className="font-heading font-bold text-xl">Adhyayan Academy</span>
+              <span className="font-heading font-bold text-xl">Vidyarthi Academy</span>
             </div>
             <p className="text-sm opacity-80 leading-relaxed mb-4">
-              Adhyayan Academy is a trusted coaching institute providing premium subject coaching in Science and Commerce. With experienced faculty, concept-based learning, and regular assessments, we help students achieve academic excellence.
+              Vidyarthi Academy is a trusted coaching institute providing premium subject coaching in Science and Commerce. With experienced faculty, concept-based learning, and regular assessments, we help students achieve academic excellence.
             </p>
             <div className="flex gap-3">
               {[Facebook, Instagram, Youtube, Twitter].map((Icon, i) => (
@@ -71,14 +71,14 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 shrink-0" />
-                <span>info@adhyayanacademy.in</span>
+                <span>vidyarthiacadmy@gmail.com</span>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="border-t border-primary-foreground/10 py-4 text-center text-sm opacity-60">
-        © 2025 Adhyayan Academy. All Rights Reserved. | The Only Mantra of Success
+        © 2025 Vidyarthi Academy. All Rights Reserved. | The Only Mantra of Success
       </div>
     </footer>
   );

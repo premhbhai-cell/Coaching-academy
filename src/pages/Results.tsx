@@ -23,7 +23,7 @@ const toppers = [
 ];
 
 const successStories = [
-  { name: "Sneha Reddy", rank: "Biology Excellence 2024", img: student2, story: "I joined Elite Academy to build strength in Biology and Chemistry. The subject-focused coaching, weekly tests, and doubt sessions helped me improve my score and confidence." },
+  { name: "Sneha Reddy", rank: "Biology Excellence 2024", img: student2, story: "I joined Vidyarthi Academy to build strength in Biology and Chemistry. The subject-focused coaching, weekly tests, and doubt sessions helped me improve my score and confidence." },
   { name: "Aarav Sharma", rank: "Physics Mastery 2024", img: student1, story: "The faculty helped me develop clarity in Physics problem solving and exam strategy. Regular practice and review sessions made a huge difference." },
 ];
 
@@ -80,7 +80,7 @@ export default function Results() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="section-title"><Trophy className="inline w-8 h-8 text-highlight mr-2" />Our Toppers</h2>
-            <p className="section-subtitle">Students who trusted Elite Academy and achieved extraordinary results.</p>
+            <p className="section-subtitle">Students who trusted Vidyarthi Academy and achieved extraordinary results.</p>
             <div className="flex flex-wrap justify-center gap-3 mt-4">
               <div className="flex items-center gap-2">
                 <Filter className="w-4 h-4 text-muted-foreground" />
@@ -121,7 +121,7 @@ export default function Results() {
       <section className="section-padding bg-surface">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="section-title text-center"><Quote className="inline w-7 h-7 text-primary mr-2" />Success Stories</h2>
-          <p className="section-subtitle text-center">In their own words — how Elite Academy changed their lives.</p>
+          <p className="section-subtitle text-center">In their own words — how Vidyarthi Academy changed their lives.</p>
           <div className="space-y-6">
             {successStories.map((s) => (
               <div key={s.name} className="bg-card rounded-xl border border-border p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start card-hover">
@@ -182,7 +182,7 @@ export default function Results() {
             </div>
             <div>
               <h2 className="section-title">How Our Material Improves Performance</h2>
-              <p className="text-muted-foreground mb-5">Our study material is the backbone of Elite Academy's success. It's not just notes — it's a complete learning system designed to maximize your score.</p>
+              <p className="text-muted-foreground mb-5">Our study material is the backbone of Vidyarthi Academy's success. It's not just notes — it's a complete learning system designed to maximize your score.</p>
               <ul className="space-y-3">
                 {materialBenefits.map((b) => (
                   <li key={b} className="flex items-start gap-3">

@@ -40,7 +40,7 @@ export default function Contact() {
               <div className="space-y-5">
                 {[
                   { icon: Phone, label: "Phone", value: "+91 8076882138, +91 9953877650", sub: "For admissions & queries", href: "tel:+918076882138" },
-                  { icon: Mail, label: "Email", value: "info@adhyayanacademy.in", sub: "admissions@adhyayanacademy.in", href: "mailto:info@adhyayanacademy.in" },
+                  { icon: Mail, label: "Email", value: "vidyarthiacadmy@gmail.com", sub: "admissions@vidyarthiacadmy.gmail.com", href: "mailto:vidyarthiacadmy@gmail.com" },
                   { icon: MapPin, label: "Address", value: "DP Door Road, Near BS Memorial School", sub: "Adarsh Nagar, Ballabgarh, Haryana" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4 bg-card rounded-xl border border-border p-4 hover:shadow-md transition-shadow">
@@ -117,7 +117,7 @@ export default function Contact() {
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
-              title="Elite Academy Location"
+              title="Vidyarthi Academy Location"
             />
           </div>
         </div>

@@ -45,7 +45,7 @@ export default function HeroSection() {
 
           <div className="relative animate-slide-left">
             <div className="rounded-[2rem] overflow-hidden shadow-[0_40px_120px_rgba(15,23,42,0.18)]">
-              <img src={heroImg} alt="Elite Academy classroom with teacher teaching" width={800} height={640} className="w-full h-auto object-cover" />
+              <img src={heroImg} alt="Vidyarthi Academy classroom with teacher teaching" width={800} height={640} className="w-full h-auto object-cover" />
             </div>
             <div className="absolute -top-3 -right-3 md:top-4 md:right-4 bg-primary text-primary-foreground px-4 py-2 rounded-xl shadow-xl font-heading font-bold text-sm animate-float">
               🏆 Premium Coaching

@@ -22,14 +22,14 @@ export default function Navbar() {
       {/* Top bar */}
       <div className="trust-bar-gradient text-primary-foreground py-1.5 text-sm hidden md:block">
         <div className="container mx-auto flex justify-between items-center px-4">
-          <span>📞 Helpline: +91 8076882138 | +91 9953877650 | 📧 info@adhyayanacademy.in</span>
+          <span>📞 Helpline: +91 8076882138 | +91 9953877650 | 📧 vidyarthiacadmy@gmail.com</span>
           <span>🏆 The Only Mantra of Success — Premium Subject Coaching for Every Learner</span>
         </div>
       </div>
       {/* Main navbar */}
       <nav className="navbar container mx-auto flex items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Adhyayan Academy Logo" className="logo" />
+          <img src={logo} alt="Vidyarthi Academy Logo" className="logo" />
         </Link>
 
         {/* Desktop links */}

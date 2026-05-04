@@ -65,7 +65,8 @@ export default function Admission() {
       <section className="section-padding bg-surface" ref={ref}>
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="section-title">Admission Process</h2>
-          <p className="section-subtitle">Simple 4-step process to join Elite Academy. Start your journey today.</p>
+          <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
+            Simple 4-step process to join Vidyarthi Academy. Start your journey today.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {admissionSteps.map((s, i) => (
               <div key={s.step} className={`bg-card rounded-xl border border-border p-5 text-left card-hover ${isVisible ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: `${i * 100}ms` }}>
@@ -196,7 +197,7 @@ export default function Admission() {
                 Submit Application <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <p className="text-xs text-muted-foreground text-center mt-3">
-                By submitting, you agree to be contacted by Elite Academy regarding admissions.
+                By submitting, you agree to be contacted by Vidyarthi Academy regarding admissions.
               </p>
             </form>
           </div>

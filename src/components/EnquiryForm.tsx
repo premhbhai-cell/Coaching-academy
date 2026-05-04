@@ -29,7 +29,7 @@ export default function EnquiryForm() {
             </p>
             <div className="space-y-4 text-sm text-muted-foreground">
               <p>📞 <strong className="text-foreground">Phone:</strong> +91 8076882138, +91 9953877650</p>
-              <p>📧 <strong className="text-foreground">Email:</strong> info@adhyayanacademy.in</p>
+              <p>📧 <strong className="text-foreground">Email:</strong> vidyarthiacadmy@gmail.com</p>
               <p>📍 <strong className="text-foreground">Address:</strong> DP Door Road, Near BS Memorial School, Adarsh Nagar, Ballabgarh, Haryana</p>
               <p>⏰ <strong className="text-foreground">Office Hours:</strong> Mon–Sat, 9 AM – 7 PM</p>
             </div>

@@ -69,7 +69,7 @@ export default function About() {
               </div>
             </div>
             <div className="rounded-xl overflow-hidden shadow-xl">
-              <img src={campusImg} alt="Elite Academy Campus" className="w-full h-auto object-cover" loading="lazy" width={800} height={512} />
+              <img src={campusImg} alt="Vidyarthi Academy Campus" className="w-full h-auto object-cover" loading="lazy" width={800} height={512} />
             </div>
           </div>
         </div>
@@ -104,11 +104,11 @@ export default function About() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-xl">
-              <img src={classroomImg} alt="Students studying at Elite Academy" className="w-full h-auto object-cover" loading="lazy" width={800} height={512} />
+              <img src={classroomImg} alt="Students studying at Vidyarthi Academy" className="w-full h-auto object-cover" loading="lazy" width={800} height={512} />
             </div>
             <div>
               <h2 className="section-title">Why Students Trust Us</h2>
-              <p className="text-muted-foreground mb-6">Over 5000+ students and their parents have chosen Elite Academy because of our transparent approach, proven results, and genuine care for every student's success.</p>
+              <p className="text-muted-foreground mb-6">Over 5000+ students and their parents have chosen Vidyarthi Academy because of our transparent approach, proven results, and genuine care for every student's success.</p>
               <ul className="space-y-3">
                 {trustPoints.map((point) => (
                   <li key={point} className={`flex items-start gap-3 ${isVisible2 ? "animate-fade-up" : "opacity-0"}`}>
@@ -126,7 +126,7 @@ export default function About() {
       <section className="section-padding bg-surface" ref={ref}>
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <h2 className="section-title">Our Journey</h2>
-          <p className="section-subtitle">Key milestones that shaped Elite Academy into what it is today.</p>
+          <p className="section-subtitle">Key milestones that shaped Vidyarthi Academy into what it is today.</p>
           <div className="relative">
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border md:-translate-x-1/2" />
             <div className="space-y-8">
@@ -205,7 +205,7 @@ export default function About() {
               { icon: "📊", title: "85% Success Rate", desc: "Highest subject excellence rate among coaching institutes in the region" },
               { icon: "👨‍🏫", title: "50+ Expert Faculty", desc: "All faculty from IITs, AIIMS, and top universities" },
               { icon: "📚", title: "Own Study Material", desc: "Proprietary study material used by 10,000+ students" },
-              { icon: "🌐", title: "Pan-India Reach", desc: "Students from 15+ states trust Elite Academy" },
+              { icon: "🌐", title: "Pan-India Reach", desc: "Students from 15+ states trust Vidyarthi Academy" },
             ].map((a) => (
               <div key={a.title} className="bg-card rounded-xl border border-border p-6 card-hover text-left">
                 <div className="text-3xl mb-3">{a.icon}</div>

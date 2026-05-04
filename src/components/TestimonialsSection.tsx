@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
-  { name: "Aryan Singh", role: "Physics Student", text: "The subject-wise coaching at Elite Academy helped me build clarity from day one. Every concept was explained slowly and then practiced with plenty of questions.", rating: 5 },
+  { name: "Aryan Singh", role: "Physics Student", text: "The subject-wise coaching at Vidyarthi Academy helped me build clarity from day one. Every concept was explained slowly and then practiced with plenty of questions.", rating: 5 },
   { name: "Priya Sharma", role: "Chemistry Student", text: "The Chemistry sessions were easy to follow and the regular assessments made sure I stayed on track. The faculty supported me through every doubt.", rating: 5 },
-  { name: "Rahul Verma", role: "Mathematics Student", text: "Maths became enjoyable after joining Elite Academy. The teaching style is concept-first, and the performance tracking helped me improve quickly.", rating: 5 },
+  { name: "Rahul Verma", role: "Mathematics Student", text: "Maths became enjoyable after joining Vidyarthi Academy. The teaching style is concept-first, and the performance tracking helped me improve quickly.", rating: 5 },
   { name: "Sneha Reddy", role: "Biology Student", text: "Biology coaching here is exceptional. The diagrams and practical examples made complex topics simple.", rating: 5 },
   { name: "Karan Joshi", role: "Accountancy Student", text: "Accountancy became my favorite subject. The practical approach and regular tests built my confidence.", rating: 5 },
   { name: "Meera Nair", role: "Economics Student", text: "Economics sessions are insightful. The real-world examples and case studies made learning engaging.", rating: 5 },
@@ -32,10 +32,24 @@ const testimonials = [
 export default function TestimonialsSection() {
   const { ref } = useScrollReveal();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
-  const testimonialsPerView = 2;
+  // Responsive testimonials per view
+  const testimonialsPerView = isMobile ? 1 : 2;
   const totalSlides = Math.ceil(testimonials.length / testimonialsPerView);
 
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Auto-play carousel
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides);
@@ -56,6 +70,31 @@ export default function TestimonialsSection() {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + totalSlides) % totalSlides);
   };
 
+  // Touch swipe handlers
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.changedTouches[0].screenX;
+  };
+
+  const handleTouchEnd = (e) => {
+    touchEndX.current = e.changedTouches[0].screenX;
+    handleSwipe();
+  };
+
+  const handleSwipe = () => {
+    const swipeThreshold = 50;
+    const difference = touchStartX.current - touchEndX.current;
+
+    if (Math.abs(difference) > swipeThreshold) {
+      if (difference > 0) {
+        // Swiped left, go to next
+        nextSlide();
+      } else {
+        // Swiped right, go to previous
+        prevSlide();
+      }
+    }
+  };
+
   const startIndex = currentIndex * testimonialsPerView;
   const visibleTestimonials = testimonials.slice(startIndex, startIndex + testimonialsPerView);
 
@@ -67,10 +106,18 @@ export default function TestimonialsSection() {
           Smooth subject-led learning with results-driven coaching.
         </p>
 
-        <div className="relative mt-10 max-w-5xl mx-auto">
-          <div className="flex gap-6 justify-center">
+        <div 
+          className="relative mt-10 max-w-5xl mx-auto"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          {/* Cards Grid - Responsive */}
+          <div className={`grid gap-6 justify-center ${isMobile ? 'grid-cols-1' : 'grid-cols-2'}`}>
             {visibleTestimonials.map((t, index) => (
-              <div key={`${t.name}-${startIndex + index}`} className="w-full max-w-md rounded-[2rem] border border-border bg-card p-8 shadow-2xl hover:shadow-[0_25px_70px_rgba(15,23,42,0.14)] transition-all duration-500 hover:-translate-y-1">
+              <div 
+                key={`${t.name}-${startIndex + index}`} 
+                className="w-full max-w-md rounded-[2rem] border border-border bg-card p-8 shadow-2xl hover:shadow-[0_25px_70px_rgba(15,23,42,0.14)] transition-all duration-500 hover:-translate-y-1"
+              >
                 <Quote className="w-10 h-10 text-primary/30 mb-5" />
                 <p className="text-muted-foreground text-base leading-relaxed mb-6">"{t.text}"</p>
                 <div className="flex items-center gap-2 mb-3 justify-center">
@@ -84,16 +131,16 @@ export default function TestimonialsSection() {
             ))}
           </div>
 
-          {/* Navigation Arrows */}
+          {/* Navigation Arrows - Hidden on mobile, visible on desktop */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors hidden md:flex"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors hidden md:flex"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -110,6 +157,11 @@ export default function TestimonialsSection() {
               />
             ))}
           </div>
+
+          {/* Mobile Swipe Hint */}
+          {isMobile && (
+            <p className="text-xs text-muted-foreground mt-4">← Swipe to see more reviews →</p>
+          )}
         </div>
       </div>
     </section>
