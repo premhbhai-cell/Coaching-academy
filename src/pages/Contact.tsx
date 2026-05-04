@@ -7,20 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-
-const contactFaqs = [
-  { q: "What are the office hours for visiting?", a: "Our office is open Monday to Saturday, 9:00 AM to 7:00 PM. Sunday visits are by appointment only. We recommend calling ahead to schedule a campus tour." },
-  { q: "How can I schedule a free counseling session?", a: "You can call us at 9650254876, fill the contact form on this page, or WhatsApp us. We'll schedule a counseling session at your convenience." },
-  { q: "What classes do you offer?", a: "We offer classes from 6th to 12th grade, covering Mathematics, Science, English, and Social Science with experienced faculty." },
-  { q: "Can parents visit the campus?", a: "Absolutely! We encourage parents to visit our campus, meet the faculty, and see our infrastructure. Campus tours are available during office hours." },
-  { q: "How do I report an issue or give feedback?", a: "You can email us at info@adhyayanacademy.in or call our helpline. We take every feedback seriously and respond within 24 hours." },
-];
 
 export default function Contact() {
   const { toast } = useToast();
@@ -53,17 +39,21 @@ export default function Contact() {
               <p className="text-muted-foreground mb-6">Have a question about our courses, admission process, or want to schedule a campus visit? We'd love to hear from you. Our team responds within 24 hours.</p>
               <div className="space-y-5">
                 {[
-                  { icon: Phone, label: "Phone", value: "9650254876", sub: "For admissions & queries" },
-                  { icon: Mail, label: "Email", value: "info@adhyayanacademy.in", sub: "admissions@adhyayanacademy.in" },
-                  { icon: MapPin, label: "Address", value: "High Tension Road, Near Malerna Road", sub: "Adarsh Nagar, Ballabgarh" },
+                  { icon: Phone, label: "Phone", value: "+91 8076882138, +91 9953877650", sub: "For admissions & queries", href: "tel:+918076882138" },
+                  { icon: Mail, label: "Email", value: "info@adhyayanacademy.in", sub: "admissions@adhyayanacademy.in", href: "mailto:info@adhyayanacademy.in" },
+                  { icon: MapPin, label: "Address", value: "DP Door Road, Near BS Memorial School", sub: "Adarsh Nagar, Ballabgarh, Haryana" },
                 ].map((item) => (
-                  <div key={item.label} className="flex items-start gap-4 bg-card rounded-xl border border-border p-4">
+                  <div key={item.label} className="flex items-start gap-4 bg-card rounded-xl border border-border p-4 hover:shadow-md transition-shadow">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                       <item.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3 className="font-heading font-bold text-foreground">{item.label}</h3>
-                      <p className="text-foreground text-sm">{item.value}</p>
+                      {item.href ? (
+                        <a href={item.href} className="text-foreground text-sm hover:text-primary transition-colors">{item.value}</a>
+                      ) : (
+                        <p className="text-foreground text-sm">{item.value}</p>
+                      )}
                       <p className="text-muted-foreground text-sm">{item.sub}</p>
                     </div>
                   </div>
@@ -89,7 +79,7 @@ export default function Contact() {
               </div>
 
               {/* WhatsApp */}
-              <a href="https://wa.me/919650254876" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 bg-green-600 text-primary-foreground px-6 py-3 rounded-xl font-bold btn-hover shadow-lg">
+              <a href="https://wa.me/918076882138" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 bg-green-600 text-primary-foreground px-6 py-3 rounded-xl font-bold btn-hover shadow-lg">
                 <MessageCircle className="w-5 h-5" /> Chat on WhatsApp
               </a>
             </div>
@@ -119,7 +109,7 @@ export default function Contact() {
       <section className="bg-surface">
         <div className="container mx-auto px-4 py-10">
           <h2 className="section-title text-center mb-6">Find Us on Map</h2>
-          <div className="rounded-xl overflow-hidden border border-border h-80">
+          <div className="rounded-xl overflow-hidden border border-border h-[400px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.123456!2d75.857727!3d25.180126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDEwJzQ4LjUiTiA3NcKwNTEnMjcuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
               width="100%"
@@ -133,21 +123,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact FAQs */}
-      <section className="section-padding bg-surface-elevated">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="section-title text-center">Frequently Asked Questions</h2>
-          <p className="section-subtitle text-center">Common questions about reaching us and visiting our campus.</p>
-          <Accordion type="single" collapsible className="space-y-3">
-            {contactFaqs.map((faq, i) => (
-              <AccordionItem key={i} value={`faq-${i}`} className="bg-card rounded-xl border border-border px-5">
-                <AccordionTrigger className="font-heading font-semibold text-left text-foreground hover:text-primary py-4">{faq.q}</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-sm pb-4">{faq.a}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
 
       <CTABanner />
       <Footer />

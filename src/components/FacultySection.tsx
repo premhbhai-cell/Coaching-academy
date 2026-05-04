@@ -1,9 +1,25 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Award, BookOpen } from "lucide-react";
+import { Award } from "lucide-react";
+import faculty1 from "@/assets/faculty-1.jpg";
+import faculty2 from "@/assets/faculty-2.jpg";
 
 const faculty = [
-  { name: "Anil Sharma", subject: "Mathematics & Science", exp: "15 years", tag: "Subject Expert", desc: "Specializes in making concepts easy to understand. Known for personalized teaching approach." },
-  { name: "Avni Sharma", subject: "English & Social Science", exp: "12 years", tag: "Expert Faculty", desc: "Focuses on comprehensive learning and analytical thinking. Dedicated to student development." },
+  {
+    name: "Sunil Vasisht",
+    subject: "Mathematics",
+    exp: "15 years",
+    tag: "Expert Teacher",
+    desc: "Expert faculty member dedicated to simplifying complex concepts and helping students achieve academic excellence through personalized guidance.",
+    img: faculty1,
+  },
+  {
+    name: "Ram Sharma",
+    subject: "Chemistry",
+    exp: "15 years",
+    tag: "Expert Teacher",
+    desc: "Expert faculty member dedicated to simplifying complex concepts and helping students achieve academic excellence through personalized guidance.",
+    img: faculty2,
+  },
 ];
 
 export default function FacultySection() {
@@ -15,31 +31,33 @@ export default function FacultySection() {
         <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-4">
           <Award className="w-4 h-4" /> Expert Faculty Team
         </div>
-        <h2 className="section-title">Learn From Experienced Faculty</h2>
+        <h2 className="section-title">Our Teachers</h2>
         <p className="section-subtitle max-w-2xl mx-auto">
-          Our faculty comprises dedicated educators committed to providing quality education 
-          and personalized attention to every student.
+          Learn from the experts who care about your future
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
           {faculty.map((f, i) => (
             <div
               key={f.name}
-              className={`bg-card rounded-xl border border-border p-6 text-left card-hover ${
+              className={`group relative bg-card rounded-[2rem] border border-border p-0 overflow-hidden shadow-2xl transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(15,23,42,0.18)] ${
                 isVisible ? "animate-fade-up" : "opacity-0"
               }`}
-              style={{ animationDelay: `${i * 100}ms` }}
+              style={{ animationDelay: `${i * 120}ms` }}
             >
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
-                <BookOpen className="w-8 h-8 text-primary" />
+              <div className="relative h-80 overflow-hidden bg-slate-100">
+                <img src={f.img} alt={f.name} className="w-full h-full object-cover" loading="lazy" />
+                <div className="absolute inset-0 bg-black/10" />
               </div>
-              <h3 className="font-heading font-bold text-foreground text-center">{f.name}</h3>
-              <p className="text-primary font-semibold text-sm text-center mt-1">{f.subject}</p>
-              <div className="flex items-center justify-center gap-2 mt-2">
-                <span className="bg-highlight/20 text-highlight-foreground text-xs px-2 py-0.5 rounded-full font-medium">{f.tag}</span>
-                <span className="text-xs text-muted-foreground">{f.exp}</span>
+              <div className="p-7 text-center">
+                <h3 className="font-heading font-bold text-2xl text-foreground mb-2">{f.name}</h3>
+                <p className="text-primary font-semibold text-sm mb-2">{f.subject}</p>
+                <span className="inline-flex items-center justify-center rounded-full bg-highlight/10 text-highlight-foreground text-xs px-3 py-1 font-semibold mb-4">
+                  {f.tag}
+                </span>
+                <p className="text-muted-foreground text-sm leading-relaxed">{f.desc}</p>
+                <div className="mt-4 text-xs text-muted-foreground">{f.exp} experience</div>
               </div>
-              <p className="text-muted-foreground text-sm mt-3 text-center">{f.desc}</p>
             </div>
           ))}
         </div>

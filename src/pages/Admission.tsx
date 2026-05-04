@@ -8,12 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { GraduationCap, CheckCircle, ArrowRight, FileText, ClipboardList, Phone } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 const admissionSteps = [
   { step: "01", title: "Fill Application Form", desc: "Complete the online application form with your personal, academic, and course preference details." },
@@ -29,15 +23,6 @@ const requiredDocs = [
   "School leaving certificate or bonafide certificate",
   "Transfer certificate (if applicable)",
   "Caste certificate (for scholarship applicants)",
-];
-
-const admissionFaqs = [
-  { q: "What is the last date for admission?", a: "Admissions are open throughout the year, but we recommend applying early as seats are limited. The main batch for 2025-26 starts in April. Late admissions are accepted subject to availability." },
-  { q: "Is there an entrance test?", a: "Yes, all students take a scholarship-cum-admission test. It's a 1-hour objective test covering Science and Math at your current class level. The test also determines scholarship eligibility (up to 50% fee waiver)." },
-  { q: "What are the payment options?", a: "We accept one-time payment, semester-wise payment, and monthly EMI (0% interest for 6 months). Payment can be made via bank transfer, UPI, credit card, or demand draft." },
-  { q: "Can I get a refund if I withdraw?", a: "Yes, 100% refund within 7 days of enrollment. After 7 days, a pro-rata refund is provided based on the number of classes attended. Processing takes 15 working days." },
-  { q: "Is hostel available for outstation students?", a: "Yes, we have separate boys and girls hostels with AC/non-AC rooms. Hostel fee includes meals (breakfast, lunch, dinner), Wi-Fi, laundry, and supervised study hours." },
-  { q: "Can I switch courses after enrollment?", a: "Yes, course switching is allowed within the first 30 days of enrollment. Talk to your batch coordinator or visit the admin office to initiate the switch." },
 ];
 
 export default function Admission() {
@@ -69,9 +54,9 @@ export default function Admission() {
 
       <section className="trust-bar-gradient py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-foreground mb-4">Admission 2025–26</h1>
+          <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-foreground mb-4">Admission Open Now</h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            Limited seats available. Fill the form below to start your journey with Elite Academy. Early applicants get up to 20% discount.
+            Limited seats are available for premium subject coaching. Fill the form below to reserve your seat and receive early admission benefits.
           </p>
         </div>
       </section>
@@ -181,14 +166,13 @@ export default function Admission() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 <select className="rounded-lg border border-border bg-card px-3 py-2.5 text-sm text-foreground" value={form.course} onChange={update("course")} required>
                   <option value="">Select Course *</option>
-                  <option>JEE Main + Advanced (2 Year)</option>
-                  <option>JEE Crash Course</option>
-                  <option>NEET UG Complete (2 Year)</option>
-                  <option>NEET Crash Course</option>
-                  <option>Foundation (Class 9)</option>
-                  <option>Foundation (Class 10)</option>
-                  <option>Board Excellence (Class 11)</option>
-                  <option>Board Excellence (Class 12)</option>
+                  <option>Physics Mastery</option>
+                  <option>Chemistry Excellence</option>
+                  <option>Mathematics Mastery</option>
+                  <option>Biology Insight</option>
+                  <option>Accountancy Foundation</option>
+                  <option>Economics Edge</option>
+                  <option>Subject Mastery Bundle</option>
                 </select>
                 <select className="rounded-lg border border-border bg-card px-3 py-2.5 text-sm text-foreground" value={form.batch} onChange={update("batch")}>
                   <option value="">Preferred Batch</option>
@@ -237,21 +221,6 @@ export default function Admission() {
         </div>
       </section>
 
-      {/* Admission FAQs */}
-      <section className="section-padding bg-surface-elevated">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="section-title text-center">Admission FAQs</h2>
-          <p className="section-subtitle text-center">Common questions about our admission process and policies.</p>
-          <Accordion type="single" collapsible className="space-y-3">
-            {admissionFaqs.map((faq, i) => (
-              <AccordionItem key={i} value={`afaq-${i}`} className="bg-card rounded-xl border border-border px-5">
-                <AccordionTrigger className="font-heading font-semibold text-left text-foreground hover:text-primary py-4">{faq.q}</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-sm pb-4">{faq.a}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
 
       <CTABanner />
       <Footer />

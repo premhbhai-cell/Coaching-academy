@@ -15,8 +15,7 @@ export default function Footer() {
               <span className="font-heading font-bold text-xl">Adhyayan Academy</span>
             </div>
             <p className="text-sm opacity-80 leading-relaxed mb-4">
-              Adhyayan Academy is a trusted coaching institute providing quality education for Classes 6 to 12. 
-              With experienced faculty, concept-based learning, and regular assessments, we help students achieve academic excellence.
+              Adhyayan Academy is a trusted coaching institute providing premium subject coaching in Science and Commerce. With experienced faculty, concept-based learning, and regular assessments, we help students achieve academic excellence.
             </p>
             <div className="flex gap-3">
               {[Facebook, Instagram, Youtube, Twitter].map((Icon, i) => (
@@ -52,7 +51,7 @@ export default function Footer() {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Our Courses</h4>
             <ul className="space-y-2 text-sm opacity-80">
-              {["JEE Main + Advanced", "NEET UG", "Class 11 Foundation", "Class 12 Boards", "Crash Course", "Test Series"].map((c) => (
+              {["Physics Mastery", "Chemistry Excellence", "Mathematics Mastery", "Biology Insight", "Accountancy Foundation", "Economics Edge"].map((c) => (
                 <li key={c}>→ {c}</li>
               ))}
             </ul>
@@ -62,13 +61,13 @@ export default function Footer() {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Contact Info</h4>
             <div className="space-y-3 text-sm opacity-80">
-              <div className="flex items-start gap-2">
+            <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>High Tension Road, Near Malerna Road, Adarsh Nagar, Ballabgarh</span>
+                <span>DP Door Road, Near BS Memorial School, Adarsh Nagar, Ballabgarh, Haryana</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 shrink-0" />
-                <span>9650254876</span>
+                <span>+91 8076882138, +91 9953877650</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 shrink-0" />

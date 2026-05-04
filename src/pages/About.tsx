@@ -11,12 +11,12 @@ import labImg from "@/assets/lab.jpg";
 import hostelImg from "@/assets/hostel.jpg";
 
 const milestones = [
-  { year: "2015", title: "Founded", desc: "Started with a vision to provide quality education for Classes 6 to 12 students." },
-  { year: "2018", title: "Growth", desc: "Expanded to serve 500+ students with dedicated faculty members." },
-  { year: "2020", title: "Online Expansion", desc: "Launched online classes reaching students across multiple cities." },
-  { year: "2022", title: "Dedicated Campus", desc: "Established modern classrooms, study areas, and learning resources." },
-  { year: "2023", title: "Excellence", desc: "Achieved consistent academic excellence with improved student results." },
-  { year: "2024", title: "The Only Mantra of Success", desc: "Recognized for quality education and student-centric approach." },
+  { year: "2015", title: "Founded", desc: "Started with a mission to deliver premium subject coaching for Science and Commerce." },
+  { year: "2018", title: "Growth", desc: "Expanded offerings to include dedicated Physics, Chemistry, Mathematics, Biology, Accountancy, and Economics programs." },
+  { year: "2020", title: "Online Expansion", desc: "Launched hybrid learning with live online classes and digital resources for every subject." },
+  { year: "2022", title: "Dedicated Campus", desc: "Established modern classrooms, labs, and study centers focused on subject mastery." },
+  { year: "2023", title: "Academic Excellence", desc: "Helped thousands of students strengthen fundamentals and improve performance across core subjects." },
+  { year: "2024", title: "The Only Mantra of Success", desc: "Recognized for quality teaching, strong subject clarity, and consistent student progress." },
 ];
 
 const infrastructure = [
@@ -28,12 +28,12 @@ const infrastructure = [
 ];
 
 const trustPoints = [
-  "Quality education for Classes 6 to 12",
-  "Experienced faculty with subject expertise",
-  "Structured daily schedule with tests and doubt sessions",
-  "Personal attention — focus on individual student needs",
-  "Regular parent-teacher meetings and progress reports",
-  "Affordable fees with flexible payment options",
+  "Expert faculty for Science and Commerce subjects",
+  "Concept-first teaching that builds strong understanding",
+  "Regular tests with performance analytics",
+  "Personalized attention and mentor feedback",
+  "Transparent progress tracking and review sessions",
+  "Premium study material curated by subject experts",
 ];
 
 export default function About() {
@@ -50,9 +50,9 @@ export default function About() {
       {/* Hero */}
       <section className="trust-bar-gradient py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-foreground mb-4">About Adhyayan Academy</h1>
+          <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-foreground mb-4">About Vidyarthi Academy</h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            Committed to providing quality education for Classes 6 to 12. The Only Mantra of Success — Guided by experienced faculty.
+            Vidyarthi Academy is a professional coaching institute focused on providing quality education and concept-based learning for students. Our aim is to help students build strong academic foundations and achieve success in their studies.
           </p>
         </div>
       </section>
@@ -62,11 +62,10 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
             <div>
-              <h2 className="section-title">Our Story</h2>
+              <h2 className="section-title">About Vidyarthi Academy</h2>
               <div className="text-muted-foreground leading-relaxed space-y-4 text-base">
-                <p>Adhyayan Academy was founded with a mission to provide quality education for Classes 6 to 12. With a singular vision to make quality coaching accessible and result-oriented, we focus on delivering conceptual clarity, strong fundamentals, and academic excellence.</p>
-                <p>Over the years, we have maintained an unwavering commitment to student success. Our structured teaching methodology, combined with experienced faculty and regular assessment, has consistently helped students achieve academic excellence. We believe that every student has the potential to excel — they just need the right guidance and environment.</p>
-                <p>Today, Adhyayan Academy operates with a dedicated team of experienced faculty members who bring passion and expertise to their teaching. Our focus on personalized attention, regular tests, doubt sessions, and concept-based learning ensures that every student receives the support they need to succeed.</p>
+                <p>Vidyarthi Academy is a professional coaching institute focused on providing quality education and concept-based learning for students. Our aim is to help students build strong academic foundations and achieve success in their studies.</p>
+                <p>We provide expert guidance in science and commerce subjects with experienced teachers and a supportive learning environment.</p>
               </div>
             </div>
             <div className="rounded-xl overflow-hidden shadow-xl">
@@ -85,7 +84,7 @@ export default function About() {
             </div>
             <h3 className="font-heading font-bold text-xl text-foreground mb-3">Our Vision</h3>
             <p className="text-muted-foreground leading-relaxed">
-              To be a trusted educational organization that transforms students into confident, capable learners through quality education in Classes 6 to 12. We envision empowering every student to achieve academic excellence and develop a lifelong passion for learning.
+              To be a trusted educational organization that transforms learners into confident, capable thinkers through premium subject coaching and concept-first learning.
             </p>
           </div>
           <div className="bg-card rounded-xl border border-border p-8 card-hover">
@@ -94,7 +93,7 @@ export default function About() {
             </div>
             <h3 className="font-heading font-bold text-xl text-foreground mb-3">Our Mission</h3>
             <p className="text-muted-foreground leading-relaxed">
-              To provide affordable, quality education for Classes 6 to 12 with a focus on conceptual clarity, strong fundamentals, and holistic student development. We aim to nurture confident, capable individuals ready for success in their academic pursuits. Our mission extends to building a supportive community for students and parents alike.
+              To deliver high-impact coaching in Science and Commerce subjects with deep conceptual clarity, consistent testing, and personalized guidance for every student.
             </p>
           </div>
         </div>
@@ -202,8 +201,8 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               { icon: "🏆", title: "Best Coaching Institute", desc: "Awarded Best Coaching Institute in Rajasthan — 2022, 2023" },
-              { icon: "🎖️", title: "AIR Top 100", desc: "45+ students in All India Top 100 in JEE & NEET combined" },
-              { icon: "📊", title: "85% Selection Rate", desc: "Highest selection rate among coaching institutes in the region" },
+              { icon: "🎖️", title: "Top Performers", desc: "45+ students ranked in the top 100 across science and commerce subjects" },
+              { icon: "📊", title: "85% Success Rate", desc: "Highest subject excellence rate among coaching institutes in the region" },
               { icon: "👨‍🏫", title: "50+ Expert Faculty", desc: "All faculty from IITs, AIIMS, and top universities" },
               { icon: "📚", title: "Own Study Material", desc: "Proprietary study material used by 10,000+ students" },
               { icon: "🌐", title: "Pan-India Reach", desc: "Students from 15+ states trust Elite Academy" },

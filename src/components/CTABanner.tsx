@@ -10,8 +10,7 @@ export default function CTABanner() {
           Ready to Excel in Your Studies?
         </h2>
         <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-          Join Adhyayan Academy for Classes 6–12 and experience quality education with experienced faculty. 
-          Limited seats available. Enroll now and start your journey to success!
+          Join Adhyayan Academy for premium subject coaching in Science and Commerce. Limited seats available. Enroll now and start your journey to success!
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link to="/admission">
@@ -19,9 +18,9 @@ export default function CTABanner() {
               Apply Now — Free Counseling <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>
-          <a href="tel:+919650254876">
+          <a href="tel:+918076882138">
             <Button size="lg" variant="outline" className="border-2 border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary font-bold px-8 py-6 text-base">
-              <Phone className="mr-2 w-5 h-5" /> Call: 9650254876
+              <Phone className="mr-2 w-5 h-5" /> Call: +91 8076882138 | +91 9953877650
             </Button>
           </a>
         </div>

@@ -5,18 +5,28 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Award, Star, CheckCircle, Quote } from "lucide-react";
 import faculty1 from "@/assets/faculty-1.jpg";
 import faculty2 from "@/assets/faculty-2.jpg";
-import faculty3 from "@/assets/faculty-3.jpg";
-import faculty4 from "@/assets/faculty-4.jpg";
 
 const facultyList = [
-  { name: "Dr. Rajesh Kumar", subject: "Physics", exp: "18 years", qualification: "PhD Physics, IIT Delhi", achievements: "200+ IIT selections, Published author", style: "Known for breaking down complex problems into simple, visual concepts. Uses real-world examples extensively.", specialization: "Mechanics, Electromagnetism, Modern Physics", img: faculty1 },
-  { name: "Prof. Sunita Verma", subject: "Chemistry", exp: "15 years", qualification: "PhD Organic Chemistry, BHU", achievements: "12 research papers, National award for teaching", style: "Interactive teaching with molecular models and reaction mechanism walkthroughs. Makes Organic Chemistry intuitive.", specialization: "Organic Chemistry, Physical Chemistry", img: faculty2 },
-  { name: "Mr. Amit Sharma", subject: "Mathematics", exp: "20 years", qualification: "M.Tech, IIT Bombay", achievements: "50+ IIT selections in 5 years, Textbook author", style: "Problem-solving focused approach. Starts with basics and builds to JEE Advanced level problems systematically.", specialization: "Calculus, Algebra, Coordinate Geometry", img: faculty3 },
-  { name: "Dr. Priya Nair", subject: "Biology", exp: "14 years", qualification: "MBBS, AIIMS Delhi", achievements: "300+ NEET selections, Former AIIMS faculty", style: "NCERT-first approach with clinical case studies. Makes Biology memorable through storytelling and diagrams.", specialization: "Human Physiology, Genetics, Ecology", img: faculty4 },
-  { name: "Mr. Suresh Iyer", subject: "Physics", exp: "16 years", qualification: "M.Sc Physics, IISc Bangalore", achievements: "Olympiad trainer, 100+ JEE Advanced selections", style: "Mathematical rigor combined with physical intuition. Excellent for advanced problem-solving techniques.", specialization: "Optics, Thermodynamics, Waves", img: faculty1 },
-  { name: "Dr. Meena Saxena", subject: "Chemistry", exp: "12 years", qualification: "PhD Inorganic Chemistry, JNU", achievements: "Pioneer in Inorganic teaching methodology", style: "Systematic approach to Inorganic Chemistry with pattern recognition techniques and memory aids.", specialization: "Inorganic Chemistry, Coordination Compounds", img: faculty4 },
-  { name: "Mr. Vikash Gupta", subject: "Mathematics", exp: "14 years", qualification: "M.Sc Mathematics, IIT Kanpur", achievements: "National-level math quiz conductor", style: "Concept-driven teaching with emphasis on understanding 'why' before 'how'. Great at building mathematical intuition.", specialization: "Trigonometry, Vectors, 3D Geometry", img: faculty3 },
-  { name: "Dr. Anita Sharma", subject: "Biology", exp: "10 years", qualification: "MD, JIPMER", achievements: "Botany specialist, 150+ NEET selections", style: "Visual teaching with extensive use of diagrams, flowcharts, and comparison tables. Makes Botany interesting.", specialization: "Plant Physiology, Botany, Biotechnology", img: faculty2 },
+  {
+    name: "Sunil Vasisht",
+    subject: "Mathematics",
+    exp: "15 years",
+    qualification: "M.Sc Mathematics",
+    achievements: "Dedicated to helping students master concepts",
+    style: "Expert faculty member dedicated to simplifying complex concepts and helping students achieve academic excellence through personalized guidance.",
+    specialization: "Mathematics",
+    img: faculty1,
+  },
+  {
+    name: "Ram Sharma",
+    subject: "Chemistry",
+    exp: "15 years",
+    qualification: "M.Sc Chemistry",
+    achievements: "Experienced chemistry instructor focused on clarity",
+    style: "Expert faculty member dedicated to simplifying complex concepts and helping students achieve academic excellence through personalized guidance.",
+    specialization: "Chemistry",
+    img: faculty2,
+  },
 ];
 
 const teachingPhilosophy = [
@@ -28,8 +38,8 @@ const teachingPhilosophy = [
 
 const studentFeedback = [
   { name: "Sneha R.", about: "Dr. Rajesh Kumar", text: "Sir's way of teaching Physics is magical. He made Electromagnetism — my weakest topic — into my strongest. His visual explanations stay in your mind forever." },
-  { name: "Aarav S.", about: "Mr. Amit Sharma", text: "Amit Sir doesn't just solve problems — he teaches you how to think about problems. After his classes, I could attempt JEE Advanced level questions with confidence." },
-  { name: "Priya P.", about: "Dr. Priya Nair", text: "Ma'am's NCERT line-by-line approach is the reason I scored 710 in NEET. She makes even the most boring Botany chapters interesting with her clinical examples." },
+  { name: "Aarav S.", about: "Mr. Amit Sharma", text: "Amit Sir doesn't just solve problems — he teaches you how to think about problems. After his classes, I could attempt advanced subject-level questions with confidence." },
+  { name: "Priya P.", about: "Dr. Priya Nair", text: "Ma'am's NCERT line-by-line approach is the reason I scored top marks. She makes even the most difficult chapters interesting with her clinical examples." },
   { name: "Rohit K.", about: "Prof. Sunita Verma", text: "Organic Chemistry felt like a nightmare before joining Elite Academy. Sunita Ma'am's reaction mechanism walkthroughs made it my favorite subject." },
 ];
 
@@ -53,8 +63,8 @@ export default function FacultyPage() {
       {/* Faculty Grid with Photos */}
       <section className="section-padding bg-surface" ref={ref}>
         <div className="container mx-auto px-4">
-          <h2 className="section-title text-center">Meet Our Expert Faculty</h2>
-          <p className="section-subtitle text-center max-w-2xl mx-auto">Every faculty member at Elite Academy is handpicked from India's top institutions.</p>
+          <h2 className="section-title text-center">Our Teachers</h2>
+          <p className="section-subtitle text-center max-w-2xl mx-auto">Learn from the experts who care about your future</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {facultyList.map((f, i) => (
               <div
@@ -154,6 +164,81 @@ export default function FacultyPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Teaching Methodology */}
+      <section className="section-padding bg-surface-elevated">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <h2 className="section-title">Teaching Methodology</h2>
+          <p className="section-subtitle max-w-2xl mx-auto">Our proven approach to making complex subjects simple and enjoyable.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
+            <div className="bg-card rounded-xl border border-border p-6 card-hover">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary text-2xl mb-4">🧠</div>
+              <h4 className="font-heading font-bold text-foreground mb-2">Concept Explanation</h4>
+              <p className="text-muted-foreground text-sm">Every topic starts with clear, step-by-step conceptual understanding using real-world examples.</p>
+            </div>
+            <div className="bg-card rounded-xl border border-border p-6 card-hover">
+              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-2xl mb-4">🌍</div>
+              <h4 className="font-heading font-bold text-foreground mb-2">Real-Life Examples</h4>
+              <p className="text-muted-foreground text-sm">We connect theoretical concepts to practical applications and everyday scenarios.</p>
+            </div>
+            <div className="bg-card rounded-xl border border-border p-6 card-hover">
+              <div className="w-14 h-14 rounded-xl bg-highlight/10 flex items-center justify-center text-highlight-foreground text-2xl mb-4">📝</div>
+              <h4 className="font-heading font-bold text-foreground mb-2">Practice Sessions</h4>
+              <p className="text-muted-foreground text-sm">Regular practice with graded difficulty to build confidence and problem-solving skills.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Our Teachers Stand Out */}
+      <section className="section-padding bg-surface">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <h2 className="section-title">Why Our Teachers Stand Out</h2>
+          <p className="section-subtitle max-w-2xl mx-auto">What makes our faculty exceptional in the coaching industry.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
+            <div className="bg-card rounded-xl border border-border p-6 card-hover">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary text-2xl mb-4">👨‍🏫</div>
+              <h4 className="font-heading font-bold text-foreground mb-2">Experienced Faculty</h4>
+              <p className="text-muted-foreground text-sm">Years of teaching experience with deep subject knowledge and exam expertise.</p>
+            </div>
+            <div className="bg-card rounded-xl border border-border p-6 card-hover">
+              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-2xl mb-4">🎯</div>
+              <h4 className="font-heading font-bold text-foreground mb-2">Student-Focused Teaching</h4>
+              <p className="text-muted-foreground text-sm">Personalized attention and adaptive teaching methods for every student's needs.</p>
+            </div>
+            <div className="bg-card rounded-xl border border-border p-6 card-hover">
+              <div className="w-14 h-14 rounded-xl bg-highlight/10 flex items-center justify-center text-highlight-foreground text-2xl mb-4">📈</div>
+              <h4 className="font-heading font-bold text-foreground mb-2">Regular Mentoring</h4>
+              <p className="text-muted-foreground text-sm">Continuous guidance and progress tracking to ensure consistent improvement.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Student Support */}
+      <section className="section-padding bg-surface-elevated">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <h2 className="section-title">Student Support</h2>
+          <p className="section-subtitle max-w-2xl mx-auto">Comprehensive support system to help students succeed at every step.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
+            <div className="bg-card rounded-xl border border-border p-6 card-hover">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary text-2xl mb-4">❓</div>
+              <h4 className="font-heading font-bold text-foreground mb-2">Doubt Sessions</h4>
+              <p className="text-muted-foreground text-sm">Dedicated doubt-clearing sessions with subject experts available regularly.</p>
+            </div>
+            <div className="bg-card rounded-xl border border-border p-6 card-hover">
+              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-2xl mb-4">👥</div>
+              <h4 className="font-heading font-bold text-foreground mb-2">Personal Guidance</h4>
+              <p className="text-muted-foreground text-sm">One-on-one mentoring and customized study plans for individual needs.</p>
+            </div>
+            <div className="bg-card rounded-xl border border-border p-6 card-hover">
+              <div className="w-14 h-14 rounded-xl bg-highlight/10 flex items-center justify-center text-highlight-foreground text-2xl mb-4">📊</div>
+              <h4 className="font-heading font-bold text-foreground mb-2">Performance Tracking</h4>
+              <p className="text-muted-foreground text-sm">Regular assessments and detailed analytics to monitor and improve performance.</p>
+            </div>
           </div>
         </div>
       </section>

@@ -9,12 +9,12 @@ import { useToast } from "@/hooks/use-toast";
 export default function EnquiryForm() {
   const { ref, isVisible } = useScrollReveal();
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", phone: "", email: "", course: "", message: "" });
+  const [form, setForm] = useState({ name: "", phone: "", email: "", subject: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Enquiry Submitted!", description: "Our counselor will contact you within 24 hours." });
-    setForm({ name: "", phone: "", email: "", course: "", message: "" });
+    toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
+    setForm({ name: "", phone: "", email: "", subject: "", message: "" });
   };
 
   return (
@@ -24,42 +24,35 @@ export default function EnquiryForm() {
           <div className={isVisible ? "animate-fade-up" : "opacity-0"}>
             <h2 className="section-title">Quick Enquiry</h2>
             <p className="text-muted-foreground text-lg mb-6">
-              Fill in the form and our academic counselor will get in touch with you within 24 hours to discuss 
+              Fill in the form and our academic counselor will get in touch with you within 24 hours to discuss
               the best course for your child.
             </p>
             <div className="space-y-4 text-sm text-muted-foreground">
-              <p>📞 <strong className="text-foreground">Phone:</strong> 9650254876</p>
+              <p>📞 <strong className="text-foreground">Phone:</strong> +91 8076882138, +91 9953877650</p>
               <p>📧 <strong className="text-foreground">Email:</strong> info@adhyayanacademy.in</p>
-              <p>📍 <strong className="text-foreground">Address:</strong> High Tension Road, Near Malerna Road, Adarsh Nagar, Ballabgarh</p>
+              <p>📍 <strong className="text-foreground">Address:</strong> DP Door Road, Near BS Memorial School, Adarsh Nagar, Ballabgarh, Haryana</p>
               <p>⏰ <strong className="text-foreground">Office Hours:</strong> Mon–Sat, 9 AM – 7 PM</p>
             </div>
           </div>
 
           <form
             onSubmit={handleSubmit}
-            className={`bg-card rounded-xl border border-border p-6 shadow-lg ${isVisible ? "animate-slide-left" : "opacity-0"}`}
+            className={`bg-card rounded-xl border border-border p-8 shadow-lg h-fit ${isVisible ? "animate-slide-left" : "opacity-0"}`}
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-              <Input placeholder="Student Name *" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
-              <Input placeholder="Phone Number *" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required />
+            <h3 className="font-heading font-bold text-xl text-foreground mb-2">Send Us a Message</h3>
+            <p className="text-muted-foreground text-sm mb-6">Fill the form below and our team will get back to you within 24 hours.</p>
+            <div className="space-y-4">
+              <Input placeholder="Your Name *" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <Input placeholder="Email *" type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
+                <Input placeholder="Phone *" required value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
+              </div>
+              <Input placeholder="Subject" value={form.subject} onChange={(e) => setForm({ ...form, subject: e.target.value })} />
+              <Textarea placeholder="Your Message *" rows={5} required value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+              <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 btn-hover font-bold py-5">
+                <Send className="mr-2 w-4 h-4" /> Send Message
+              </Button>
             </div>
-            <Input placeholder="Email Address" className="mb-4" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-            <select
-              className="w-full mb-4 rounded-lg border border-border bg-card px-3 py-2.5 text-sm text-foreground"
-              value={form.course}
-              onChange={(e) => setForm({ ...form, course: e.target.value })}
-            >
-              <option value="">Select Course *</option>
-              <option>JEE Main + Advanced</option>
-              <option>NEET UG</option>
-              <option>Foundation (Class 9–10)</option>
-              <option>Board Exam Prep</option>
-              <option>Crash Course</option>
-            </select>
-            <Textarea placeholder="Your Message (optional)" className="mb-4" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
-            <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 btn-hover font-bold py-5">
-              <Send className="mr-2 w-4 h-4" /> Submit Enquiry
-            </Button>
           </form>
         </div>
       </div>

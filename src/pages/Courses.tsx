@@ -6,47 +6,119 @@ import CTABanner from "@/components/CTABanner";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Clock, Users, ArrowRight, CheckCircle } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import classroomImg from "@/assets/classroom.jpg";
 
 const allCourses = [
-  { id: "class-6-7", title: "Classes 6–7", category: "Foundation", classLevel: "6-7", duration: "1 Year", students: "200+", fee: "₹25,000/year", desc: "Build strong foundation in Mathematics, Science, English, and Social Science. Focus on conceptual clarity and developing problem-solving skills.", features: ["All 4 subjects", "Regular tests", "Doubt sessions", "Concept clarity", "Study material", "Assessment"] },
-  { id: "class-8-9", title: "Classes 8–9", category: "Foundation", classLevel: "8-9", duration: "1 Year", students: "250+", fee: "₹30,000/year", desc: "Strengthen fundamentals with advanced topics in Math and Science. Prepare for competitive exams while exceling in academics.", features: ["All 4 subjects", "Weekly tests", "Doubt sessions", "Concept building", "Board prep", "Assessment"] },
-  { id: "class-10", title: "Class 10", category: "Board", classLevel: "10", duration: "1 Year", students: "300+", fee: "₹35,000/year", desc: "Comprehensive Board exam preparation for Class 10. Focus on scoring 90%+ with clear concept understanding.", features: ["All 4 subjects", "Board pattern", "Sample papers", "Regular tests", "Doubt sessions", "Lab practicals"] },
-  { id: "class-11", title: "Class 11", category: "Board", classLevel: "11", duration: "1 Year", students: "280+", fee: "₹40,000/year", desc: "Advanced curriculum covering Mathematics, Science, English, and Social Science. Focus on both board and competitive exam preparation.", features: ["All 4 subjects", "Regular tests", "Concept focus", "Doubt sessions", "Study material", "Assessment"] },
-  { id: "class-12", title: "Class 12", category: "Board", classLevel: "12", duration: "1 Year", students: "320+", fee: "₹40,000/year", desc: "Complete Class 12 preparation with focus on Board exams and higher studies. Strong emphasis on concept clarity and exam strategies.", features: ["All 4 subjects", "Board pattern", "Sample papers", "Doubt sessions", "Career guidance", "Assessment"] },
-  { id: "maths-special", title: "Mathematics Mastery", category: "Subject", classLevel: "6-12", duration: "As needed", students: "400+", fee: "₹15,000/year", desc: "Specialized Mathematics coaching for students who need extra support. Covers all topics from basics to advanced level.", features: ["Core concepts", "Problem solving", "Regular practice", "One-on-one", "Doubt clearing", "Assessment"] },
-  { id: "science-special", title: "Science Excellence", category: "Subject", classLevel: "6-12", duration: "As needed", students: "350+", fee: "₹15,000/year", desc: "Comprehensive Science tutoring covering Physics, Chemistry, and Biology. Strong focus on lab work and practical understanding.", features: ["All sciences", "Practicals", "Labs", "Doubt clearing", "Regular tests", "Assessment"] },
-  { id: "english-special", title: "English Enhancement", category: "Subject", classLevel: "6-12", duration: "As needed", students: "300+", fee: "₹12,000/year", desc: "English language and literature coaching for better communication, grammar, and writing skills.", features: ["Grammar", "Literature", "Speaking", "Writing", "Reading", "Assessment"] },
+  {
+    id: "physics",
+    title: "Physics Mastery",
+    category: "Science",
+    classLevel: "Core Subject",
+    duration: "Year-Round",
+    students: "520+",
+    fee: "₹28,000/year",
+    desc: "Interactive Physics coaching to master concepts, problem solving, and application for competitive exams.",
+    features: ["Concept clarity", "Problem solving", "Regular quizzes", "Doubt support", "Performance tracking"],
+  },
+  {
+    id: "chemistry",
+    title: "Chemistry Excellence",
+    category: "Science",
+    classLevel: "Core Subject",
+    duration: "Year-Round",
+    students: "480+",
+    fee: "₹28,000/year",
+    desc: "Comprehensive Chemistry guidance covering physical, organic, and inorganic topics with exam focus.",
+    features: ["Topic mastery", "Reaction mapping", "Practice sessions", "Doubt clearing", "Test analysis"],
+  },
+  {
+    id: "mathematics",
+    title: "Mathematics Mastery",
+    category: "Core",
+    classLevel: "Core Subject",
+    duration: "Year-Round",
+    students: "600+",
+    fee: "₹30,000/year",
+    desc: "Advanced Mathematics tutoring for strong fundamentals, speed, and accuracy in problem solving.",
+    features: ["Algebra", "Calculus", "Geometry", "Mock tests", "Performance review"],
+  },
+  {
+    id: "biology",
+    title: "Biology Insight",
+    category: "Science",
+    classLevel: "Core Subject",
+    duration: "Year-Round",
+    students: "420+",
+    fee: "₹28,000/year",
+    desc: "Focused Biology coaching with detailed NCERT coverage, diagrams, and high-yield exam preparation.",
+    features: ["NCERT mastery", "Diagram practice", "MCQ training", "Revision notes", "Mock tests"],
+  },
+  {
+    id: "accountancy",
+    title: "Accountancy Foundation",
+    category: "Commerce",
+    classLevel: "Core Subject",
+    duration: "Year-Round",
+    students: "360+",
+    fee: "₹25,000/year",
+    desc: "Strong Accountancy training for conceptual clarity, numerical practice, and exam readiness.",
+    features: ["Financial accounting", "Ledger practice", "Problem solving", "Concept checks", "Assessment"],
+  },
+  {
+    id: "economics",
+    title: "Economics Edge",
+    category: "Commerce",
+    classLevel: "Core Subject",
+    duration: "Year-Round",
+    students: "340+",
+    fee: "₹25,000/year",
+    desc: "Insightful Economics coaching with focus on theory, diagrams, case studies, and exam strategy.",
+    features: ["Microeconomics", "Macroeconomics", "Charts & diagrams", "Practice questions", "Performance review"],
+  },
 ];
 
-const categories = ["All", "Foundation", "Board", "Subject"];
+const categories = ["All", "Science", "Commerce", "Core"];
 
 const categoryOverview = [
-  { name: "Foundation (6–9)", desc: "Build strong fundamentals in Mathematics, Science, English, and Social Science for Classes 6 to 9.", color: "bg-primary/10 text-primary" },
-  { name: "Board Preparation (10–12)", desc: "Comprehensive Board exam preparation ensuring excellent results in Class 10 and 12 Board exams.", color: "bg-accent/10 text-accent" },
-  { name: "Subject Specialization", desc: "Focused coaching in Mathematics, Science, and English for students who need additional support.", color: "bg-highlight/20 text-highlight-foreground" },
-  { name: "All Subjects", desc: "Complete curriculum covering Mathematics, Science, English, and Social Science for academic excellence.", color: "bg-primary/10 text-primary" },
+  {
+    name: "Science Subjects",
+    desc: "Deep mastery of Physics, Chemistry, and Biology with concept-driven learning.",
+    color: "bg-primary/10 text-primary",
+  },
+  {
+    name: "Commerce Subjects",
+    desc: "Expert coaching in Accountancy and Economics for competitive and academic success.",
+    color: "bg-accent/10 text-accent",
+  },
+  {
+    name: "Mathematics Support",
+    desc: "Advanced Mathematics tutoring to improve speed, accuracy, and conceptual strength.",
+    color: "bg-highlight/20 text-highlight-foreground",
+  },
+  {
+    name: "Subject Excellence",
+    desc: "Focused coaching for students seeking premium subject-level preparation.",
+    color: "bg-primary/10 text-primary",
+  },
 ];
 
 const whoShouldJoin = [
-  { title: "Class 6–7 Students", desc: "Build a strong foundation in all subjects. Develop core concepts in Mathematics and Science." },
-  { title: "Class 8–9 Students", desc: "Strengthen fundamentals and prepare for competitive exams. Focus on conceptual clarity." },
-  { title: "Class 10 Students", desc: "Comprehensive Board exam preparation with focus on scoring 90%+." },
-  { title: "Class 11–12 Students", desc: "Advanced curriculum with focus on Board exams and higher studies." },
-];
-
-const courseFaqs = [
-  { q: "What subjects are covered?", a: "We cover Mathematics, Science (Physics, Chemistry, Biology), English, and Social Science for Classes 6 to 12." },
-  { q: "What is the admission process?", a: "Fill the online form or visit our campus. We provide a counseling session to understand your needs and recommend the best course." },
-  { q: "Are there scholarships available?", a: "Yes, we offer scholarships based on merit. Contact us for details." },
-  { q: "Can I switch between batches?", a: "Yes, batch switching is allowed with prior notice, subject to availability." },
-  { q: "What if I miss classes?", a: "Study materials and reference notes are provided. Doubt sessions are held regularly to help you catch up." },
+  {
+    title: "Students Seeking Mastery",
+    desc: "Ideal for learners who want deep subject understanding and strong concept clarity.",
+  },
+  {
+    title: "Competitive Exam Aspirants",
+    desc: "Designed for ambitious students aiming for top subject-level performance through focused coaching.",
+  },
+  {
+    title: "Board Exam Improve",
+    desc: "Great for students who want stronger board exam performance with expert guidance.",
+  },
+  {
+    title: "Revision & Practice Boost",
+    desc: "Ideal for students who need structured revision and frequent assessment.",
+  },
 ];
 
 export default function Courses() {
@@ -64,17 +136,16 @@ export default function Courses() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-foreground mb-4">Our Courses</h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            Quality education for Classes 6 to 12 covering Mathematics, Science, English, and Social Science. Choose the right program for your child's success.
+            Expert subject coaching in Science and Commerce with a premium learning experience.
           </p>
         </div>
       </section>
 
-      {/* Course Categories Overview */}
       <section className="section-padding bg-surface-elevated">
         <div className="container mx-auto px-4">
           <h2 className="section-title text-center">Course Categories</h2>
-          <p className="section-subtitle text-center max-w-2xl mx-auto">We offer specialized programs for every competitive exam and academic level.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <p className="section-subtitle text-center max-w-2xl mx-auto">Choose the right subject track to strengthen your preparation and boost your confidence.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-8">
             {categoryOverview.map((cat) => (
               <div key={cat.name} className="bg-card rounded-xl border border-border p-6 card-hover">
                 <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 ${cat.color}`}>{cat.name}</span>
@@ -85,7 +156,6 @@ export default function Courses() {
         </div>
       </section>
 
-      {/* Filters */}
       <section className="py-8 bg-surface border-b border-border">
         <div className="container mx-auto px-4 flex flex-wrap gap-3 justify-center">
           {categories.map((cat) => (
@@ -104,7 +174,6 @@ export default function Courses() {
         </div>
       </section>
 
-      {/* Course List */}
       <section className="section-padding bg-surface" ref={ref}>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -119,7 +188,7 @@ export default function Courses() {
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="bg-primary/10 text-primary text-xs font-bold px-2.5 py-0.5 rounded-full">{c.category}</span>
-                    <span className="text-xs text-muted-foreground">Class {c.classLevel}</span>
+                    <span className="text-xs text-muted-foreground">{c.classLevel}</span>
                   </div>
                   <h3 className="font-heading font-bold text-xl text-foreground mb-2">{c.title}</h3>
                   <p className="text-muted-foreground text-sm mb-4">{c.desc}</p>
@@ -135,7 +204,7 @@ export default function Courses() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-3">
                     <Link to={`/courses/${c.id}`}>
                       <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-primary-foreground btn-hover">
                         View Details <ArrowRight className="ml-1 w-4 h-4" />
@@ -152,13 +221,12 @@ export default function Courses() {
         </div>
       </section>
 
-      {/* Who Should Join */}
       <section className="section-padding bg-surface-elevated" ref={ref2}>
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
             <div>
               <h2 className="section-title">Who Should Join Elite Academy?</h2>
-              <p className="text-muted-foreground mb-6">Whether you're just starting your competitive exam journey or looking for that final push, we have the right program for you.</p>
+              <p className="text-muted-foreground mb-6">Whether you're building fundamentals or aiming for top competitive exam ranks, we have the right coaching program for you.</p>
               <div className="space-y-4">
                 {whoShouldJoin.map((item, i) => (
                   <div key={item.title} className={`bg-card rounded-xl border border-border p-4 card-hover ${isVisible2 ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: `${i * 80}ms` }}>
@@ -175,19 +243,18 @@ export default function Courses() {
         </div>
       </section>
 
-      {/* Teaching Approach */}
       <section className="section-padding bg-surface">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="section-title">Our Teaching Approach</h2>
-          <p className="section-subtitle max-w-2xl mx-auto">A proven methodology that has helped thousands of students crack JEE & NEET.</p>
+          <p className="section-subtitle max-w-2xl mx-auto">A proven methodology that helps students gain clarity, confidence, and consistent performance.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { step: "01", title: "Concept Building", desc: "Every topic begins with deep conceptual understanding using real-world examples and visual aids." },
-              { step: "02", title: "Problem Practice", desc: "Gradual difficulty increase from NCERT to advanced-level problems with daily practice sheets (DPP)." },
-              { step: "03", title: "Testing & Analysis", desc: "Weekly chapter tests and monthly full-syllabus tests with detailed performance analysis and ranking." },
-              { step: "04", title: "Doubt Resolution", desc: "Daily doubt-clearing sessions with subject experts. No question goes unanswered." },
-              { step: "05", title: "Revision Cycles", desc: "Structured revision schedule with formula sheets, quick notes, and topic-wise revision tests." },
-              { step: "06", title: "Mock Exams", desc: "Full-length JEE/NEET pattern mock exams with All India ranking and detailed solutions." },
+              { step: "01", title: "Concept Building", desc: "Start every topic with deep understanding before moving to practice." },
+              { step: "02", title: "Practice Sessions", desc: "Daily problem-solving and topic-based exercises to strengthen skills." },
+              { step: "03", title: "Regular Assessments", desc: "Weekly evaluations and detailed feedback to monitor progress." },
+              { step: "04", title: "Doubt Support", desc: "Dedicated doubt sessions to clear every question and misconception." },
+              { step: "05", title: "Revision Cycles", desc: "Structured revision with notes, formula sheets, and quick tests." },
+              { step: "06", title: "Mock Exams", desc: "Real exam simulations with performance analytics and strategy review." },
             ].map((item) => (
               <div key={item.step} className="bg-card rounded-xl border border-border p-5 text-left card-hover">
                 <span className="text-primary font-heading font-extrabold text-2xl">{item.step}</span>
@@ -196,22 +263,6 @@ export default function Courses() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Course FAQs */}
-      <section className="section-padding bg-surface-elevated">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="section-title text-center">Frequently Asked Questions</h2>
-          <p className="section-subtitle text-center">Common questions about our courses and admission process.</p>
-          <Accordion type="single" collapsible className="space-y-3">
-            {courseFaqs.map((faq, i) => (
-              <AccordionItem key={i} value={`cfaq-${i}`} className="bg-card rounded-xl border border-border px-5">
-                <AccordionTrigger className="font-heading font-semibold text-left text-foreground hover:text-primary py-4">{faq.q}</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-sm pb-4">{faq.a}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
         </div>
       </section>
 

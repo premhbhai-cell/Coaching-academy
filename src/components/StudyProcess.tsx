@@ -1,12 +1,10 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const steps = [
-  { step: "01", title: "Enroll & Assessment", desc: "Take a diagnostic test to assess your current level. We place you in the right batch based on your strengths and weaknesses." },
-  { step: "02", title: "Structured Learning", desc: "Daily 4-hour classroom sessions with expert faculty. Each topic covered with theory, examples, and practice problems." },
-  { step: "03", title: "Practice & Testing", desc: "Daily Practice Problems (DPP), weekly chapter tests, and monthly full-syllabus exams to track your progress continuously." },
-  { step: "04", title: "Doubt Resolution", desc: "Daily 2-hour doubt sessions where you can get one-on-one help from faculty. No question left unanswered." },
-  { step: "05", title: "Performance Review", desc: "Monthly parent-teacher meetings and detailed progress reports. Personal mentor tracks your improvement areas." },
-  { step: "06", title: "Exam Ready", desc: "Final revision modules, mock tests simulating real exams, and time management strategies to ensure peak performance on D-day." },
+  { step: "01", title: "Concept Learning", desc: "Begin every subject with deep conceptual understanding from expert faculty." },
+  { step: "02", title: "Practice & Assignments", desc: "Regular practice sessions and assignment reviews to build speed and accuracy." },
+  { step: "03", title: "Regular Testing", desc: "Frequent assessments with detailed analysis to track progress and improve performance." },
+  { step: "04", title: "Performance Analysis", desc: "Data-driven review sessions help identify strengths and plan targeted improvements." },
 ];
 
 export default function StudyProcess() {
@@ -15,28 +13,34 @@ export default function StudyProcess() {
   return (
     <section className="section-padding bg-surface-elevated" ref={ref}>
       <div className="container mx-auto px-4 text-center">
-        <h2 className="section-title">Our Proven Study Process</h2>
+        <h2 className="section-title">Our Study Process</h2>
         <p className="section-subtitle max-w-2xl mx-auto">
-          A step-by-step journey designed to take you from foundation to top rank.
+          A modern learning path designed to make subject mastery effortless and measurable.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {steps.map((s, i) => (
-            <div
-              key={s.step}
-              className={`relative bg-card rounded-xl border border-border p-6 text-left card-hover ${
-                isVisible ? "animate-fade-up" : "opacity-0"
-              }`}
-              style={{ animationDelay: `${i * 100}ms` }}
-            >
-              <div className="font-heading font-extrabold text-5xl text-primary/10 absolute top-3 right-4">{s.step}</div>
-              <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm mb-3">
-                {s.step}
+        <div className="relative mt-12">
+          <div className="hidden md:block absolute inset-x-0 top-1/2 h-px bg-border" />
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {steps.map((step, index) => (
+              <div
+                key={step.step}
+                className={`relative bg-card rounded-[2rem] border border-border p-6 text-left card-hover ${
+                  isVisible ? "animate-fade-up" : "opacity-0"
+                }`}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="absolute -top-5 left-1/2 md:left-6 transform -translate-x-1/2 md:translate-x-0">
+                  <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-heading font-bold text-lg shadow-lg">
+                    {step.step}
+                  </div>
+                </div>
+                <div className="mt-6 md:mt-2">
+                  <h3 className="font-heading font-bold text-foreground mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{step.desc}</p>
+                </div>
               </div>
-              <h3 className="font-heading font-bold text-foreground mb-2">{s.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

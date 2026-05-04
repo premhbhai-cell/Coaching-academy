@@ -1,13 +1,11 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Trophy, Star } from "lucide-react";
+import { Trophy } from "lucide-react";
 
-const toppers = [
-  { name: "Student A", rank: "Class 10 - 94%", exam: "CBSE Boards 2024", score: "470/500", photo: "👨‍🎓" },
-  { name: "Student B", rank: "Class 12 - 96%", exam: "CBSE Boards 2024", score: "480/500", photo: "👩‍🎓" },
-  { name: "Student C", rank: "Class 9 - 93%", exam: "School Exam 2024", score: "465/500", photo: "👨‍🎓" },
-  { name: "Student D", rank: "Class 10 - 95%", exam: "CBSE Boards 2024", score: "475/500", photo: "👩‍🎓" },
-  { name: "Student E", rank: "Class 11 - 91%", exam: "School Exam 2024", score: "455/500", photo: "👨‍🎓" },
-  { name: "Student F", rank: "Class 12 - 94%", exam: "School Exam 2024", score: "470/500", photo: "👩‍🎓" },
+const teachingPoints = [
+  { title: "Concept-Based Learning", desc: "We focus on deep understanding of core concepts rather than rote memorization.", icon: "🧠" },
+  { title: "Regular Tests & Analysis", desc: "Frequent assessments with detailed performance analysis to track progress.", icon: "📊" },
+  { title: "Doubt Solving Sessions", desc: "Dedicated sessions to clear all doubts and ensure no concept is left behind.", icon: "❓" },
+  { title: "Personalized Attention", desc: "Individual mentoring and customized learning plans for every student.", icon: "👤" },
 ];
 
 export default function ResultsSection() {
@@ -17,33 +15,25 @@ export default function ResultsSection() {
     <section className="section-padding bg-surface-elevated" ref={ref}>
       <div className="container mx-auto px-4 text-center">
         <div className="inline-flex items-center gap-2 bg-highlight/20 text-highlight-foreground px-4 py-1.5 rounded-full text-sm font-medium mb-4">
-          <Trophy className="w-4 h-4" /> Our Pride — Star Performers
+          <Trophy className="w-4 h-4" /> Our Teaching Approach
         </div>
-        <h2 className="section-title">Our Toppers Speak for Us</h2>
+        <h2 className="section-title">Our Teaching Approach</h2>
         <p className="section-subtitle max-w-2xl mx-auto">
-          Year after year, Elite Academy students secure top ranks in JEE and NEET, 
-          making us one of India's most result-oriented coaching institutes.
+          We focus on concept clarity, regular practice, and performance tracking to ensure students achieve academic excellence.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {toppers.map((t, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+          {teachingPoints.map((point, i) => (
             <div
-              key={t.name}
-              className={`bg-card rounded-xl border border-border p-6 card-hover ${
+              key={point.title}
+              className={`bg-white/10 backdrop-blur-xl border border-white/10 rounded-[2rem] p-7 text-left shadow-2xl card-hover ${
                 isVisible ? "animate-fade-up" : "opacity-0"
               }`}
-              style={{ animationDelay: `${i * 100}ms` }}
+              style={{ animationDelay: `${i * 90}ms` }}
             >
-              <div className="text-5xl mb-3">{t.photo}</div>
-              <h3 className="font-heading font-bold text-lg text-foreground">{t.name}</h3>
-              <div className="inline-block bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-bold mt-2">
-                {t.rank}
-              </div>
-              <p className="text-muted-foreground text-sm mt-2">{t.exam}</p>
-              <div className="flex items-center justify-center gap-1 mt-2">
-                <Star className="w-4 h-4 text-highlight fill-highlight" />
-                <span className="font-bold text-foreground">{t.score}</span>
-              </div>
+              <div className="mb-5 w-16 h-16 rounded-3xl bg-gradient-to-br from-primary to-accent text-white shadow-lg flex items-center justify-center text-3xl">{point.icon}</div>
+              <h3 className="font-heading font-bold text-2xl text-foreground mb-2">{point.title}</h3>
+              <p className="text-muted-foreground text-sm mb-4">{point.desc}</p>
             </div>
           ))}
         </div>

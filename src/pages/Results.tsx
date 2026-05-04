@@ -10,41 +10,41 @@ import student2 from "@/assets/student-2.jpg";
 import studyMaterialImg from "@/assets/study-material.jpg";
 
 const toppers = [
-  { name: "Sneha Reddy", rank: "AIR 7", exam: "NEET 2024", score: "715/720", year: "2024", img: student2 },
-  { name: "Aarav Sharma", rank: "AIR 15", exam: "JEE Advanced 2024", score: "328/360", year: "2024", img: student1 },
-  { name: "Priya Patel", rank: "AIR 42", exam: "NEET 2024", score: "710/720", year: "2024", img: student2 },
-  { name: "Rohit Kumar", rank: "AIR 89", exam: "JEE Advanced 2024", score: "312/360", year: "2024", img: student1 },
-  { name: "Vikram Singh", rank: "AIR 156", exam: "JEE Main 2024", score: "99.8%ile", year: "2024", img: student1 },
-  { name: "Ananya Gupta", rank: "AIR 23", exam: "NEET 2024", score: "705/720", year: "2024", img: student2 },
-  { name: "Karan Joshi", rank: "AIR 34", exam: "JEE Advanced 2023", score: "320/360", year: "2023", img: student1 },
-  { name: "Meera Nair", rank: "AIR 12", exam: "NEET 2023", score: "712/720", year: "2023", img: student2 },
-  { name: "Aditya Verma", rank: "AIR 67", exam: "JEE Advanced 2023", score: "305/360", year: "2023", img: student1 },
-  { name: "Pooja Singh", rank: "AIR 5", exam: "NEET 2023", score: "718/720", year: "2023", img: student2 },
+  { name: "Sneha Reddy", rank: "Top Scorer", exam: "Biology Excellence 2024", category: "Science", score: "715/720", year: "2024", img: student2 },
+  { name: "Aarav Sharma", rank: "Top Scorer", exam: "Physics Mastery 2024", category: "Science", score: "328/360", year: "2024", img: student1 },
+  { name: "Priya Patel", rank: "Top Scorer", exam: "Chemistry Edge 2024", category: "Science", score: "710/720", year: "2024", img: student2 },
+  { name: "Rohit Kumar", rank: "Top Scorer", exam: "Mathematics Mastery 2024", category: "Mathematics", score: "312/360", year: "2024", img: student1 },
+  { name: "Vikram Singh", rank: "Top Scorer", exam: "Science Proficiency 2024", category: "Science", score: "99.8%ile", year: "2024", img: student1 },
+  { name: "Ananya Gupta", rank: "Top Scorer", exam: "Biology Insight 2024", category: "Science", score: "705/720", year: "2024", img: student2 },
+  { name: "Karan Joshi", rank: "Top Scorer", exam: "Physics Excellence 2023", category: "Science", score: "320/360", year: "2023", img: student1 },
+  { name: "Meera Nair", rank: "Top Scorer", exam: "Chemistry Edge 2023", category: "Science", score: "712/720", year: "2023", img: student2 },
+  { name: "Aditya Verma", rank: "Top Scorer", exam: "Mathematics Mastery 2023", category: "Mathematics", score: "305/360", year: "2023", img: student1 },
+  { name: "Pooja Singh", rank: "Top Scorer", exam: "Accountancy Foundation 2023", category: "Commerce", score: "718/720", year: "2023", img: student2 },
 ];
 
 const successStories = [
-  { name: "Sneha Reddy", rank: "AIR 7 — NEET 2024", img: student2, story: "When I joined Elite Academy in Class 11, I was scoring below average in Biology. The NCERT line-by-line approach and daily practice completely transformed my preparation. My mentor Dr. Priya Nair would personally review my weak areas every week. The mock tests were extremely close to the actual NEET paper. I owe my success to the entire Elite Academy team." },
-  { name: "Aarav Sharma", rank: "AIR 15 — JEE Advanced 2024", img: student1, story: "I had failed to crack JEE in my first attempt. The crash course at Elite Academy changed everything. The faculty identified my weak areas within the first week and created a personalized improvement plan. The daily tests and error analysis sessions were game-changers. The problem-solving workshops by Mr. Amit Sharma helped me tackle even the toughest JEE Advanced questions with confidence." },
+  { name: "Sneha Reddy", rank: "Biology Excellence 2024", img: student2, story: "I joined Elite Academy to build strength in Biology and Chemistry. The subject-focused coaching, weekly tests, and doubt sessions helped me improve my score and confidence." },
+  { name: "Aarav Sharma", rank: "Physics Mastery 2024", img: student1, story: "The faculty helped me develop clarity in Physics problem solving and exam strategy. Regular practice and review sessions made a huge difference." },
 ];
 
 const materials = [
-  { title: "Physics Complete Notes", type: "Notes", pages: "450+ pages", exams: "JEE + NEET", desc: "Chapter-wise comprehensive notes with solved examples, derivations, and important formulas. Covers all topics from mechanics to modern physics." },
-  { title: "Chemistry Formula Sheet", type: "Notes", pages: "120 pages", exams: "JEE + NEET", desc: "All formulas, reactions, and important facts organized by chapter. Includes organic reaction mechanisms and periodic table shortcuts." },
-  { title: "Mathematics DPP Set", type: "Assignments", pages: "300+ problems", exams: "JEE", desc: "Daily Practice Problems organized by topic and difficulty level. Includes hints and detailed solutions for every problem." },
-  { title: "Biology NCERT Companion", type: "Notes", pages: "380 pages", exams: "NEET", desc: "Line-by-line NCERT analysis with additional MCQs and explanations. Covers all 38 chapters with diagrams and flowcharts." },
-  { title: "JEE Mock Test Series", type: "Test Series", pages: "20 full tests", exams: "JEE", desc: "Simulated JEE Main & Advanced papers with detailed solutions, time management tips, and performance analytics." },
-  { title: "NEET Mock Test Series", type: "Test Series", pages: "25 full tests", exams: "NEET", desc: "NEET-pattern tests with answer keys, performance analysis, and comparison with All India toppers." },
-  { title: "Previous Year Papers", type: "Assignments", pages: "10 years", exams: "JEE + NEET", desc: "Solved previous year papers with trend analysis, topic distribution, and difficulty level marking." },
-  { title: "Quick Revision Booklet", type: "Notes", pages: "200 pages", exams: "JEE + NEET", desc: "Last-minute revision material covering all high-weightage topics with quick formulas and key points." },
+  { title: "Physics Complete Notes", type: "Notes", pages: "450+ pages", exams: "Science", desc: "Chapter-wise comprehensive notes with solved examples, derivations, and important formulas for Physics." },
+  { title: "Chemistry Formula Sheet", type: "Notes", pages: "120 pages", exams: "Science", desc: "All formulas, reactions, and important facts organized by chapter for Chemistry." },
+  { title: "Mathematics DPP Set", type: "Assignments", pages: "300+ problems", exams: "Mathematics", desc: "Practice problems arranged by topic and difficulty level with detailed solutions." },
+  { title: "Biology NCERT Companion", type: "Notes", pages: "380 pages", exams: "Biology", desc: "NCERT-aligned analysis with additional practice questions and diagrams." },
+  { title: "Subject Practice Series", type: "Test Series", pages: "20 full tests", exams: "All Subjects", desc: "Simulated subject-level tests with detailed solutions, time tips, and performance analytics." },
+  { title: "Revision Master Pack", type: "Notes", pages: "200 pages", exams: "All Subjects", desc: "Quick revision material covering high-weightage topics and key concepts." },
+  { title: "Previous Year Subject Papers", type: "Assignments", pages: "10 years", exams: "All Subjects", desc: "Solved previous year papers with trend analysis and topic distribution." },
+  { title: "Concept Checkers", type: "Practice", pages: "150+ worksheets", exams: "All Subjects", desc: "Weekly concept check worksheets for targeted practice and rapid improvement." },
 ];
 
 const years = ["All", "2024", "2023"];
-const exams = ["All", "JEE", "NEET"];
+const exams = ["All", "Science", "Commerce", "Mathematics"];
 
 const materialBenefits = [
   "Prepared by faculty with 15+ years of teaching experience",
-  "Updated every year based on latest exam patterns and trends",
-  "Covers NCERT thoroughly — the backbone of JEE & NEET",
+  "Updated every year based on the latest subject exam trends",
+  "Covers NCERT thoroughly — the foundation of strong subject learning",
   "Graded difficulty from basic to advanced for progressive learning",
   "Includes solved examples, practice problems, and previous year questions",
   "Digital access included — study on any device, anytime",
@@ -58,7 +58,7 @@ export default function Results() {
 
   const filtered = toppers.filter((t) => {
     const yearMatch = yearFilter === "All" || t.year === yearFilter;
-    const examMatch = examFilter === "All" || t.exam.includes(examFilter);
+    const examMatch = examFilter === "All" || t.category === examFilter;
     return yearMatch && examMatch;
   });
 
